@@ -3,8 +3,6 @@
 # Authors (e-mail):
 # R version: 3.6.1
 # R packages used (versions): gdata (2.18.0), haven (2.1.1), MplusAutomation (0.7-3)
-# Date of last changes: 2019.11.18
-# What changed compared to last version: I added the measurement invariance analysis for robustness check (age, gender education)
 
 
 ### Table of contents #### (see document outline)
