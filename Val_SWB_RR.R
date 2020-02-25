@@ -6,19 +6,6 @@
 
 
 ### Table of contents #### (see document outline)
-# Chapter 1: PREPARATION (LOADING PACKAGES and DATA, LABELS and NAMES, CLEANING DATA)
-# Chapter 2: Testing Measurement Invariance accross measurement occasions
-# Chapter 2.1: Openness to change values
-# Chapter 2.2: Conservation values
-# Chapter 2.3: Self-transcendence
-# Chapter 2.4: Self-enhancement
-# Chapter 2.5: SWB: cognitive component
-# Chapter 2.6: SWB: affective component
-# Chapter 3: Main Analysis: Random Intercept Cross-Lagged Panel Models (RI-CLPMs)
-# Chapter 4: Robustness Check for acqiescience, scale usage, and relative importance of value
-# Chapter 5: Robustness checks (Testing Measurement Invariance over groups + test effects in groups)
-# Chapter 5.1 we check whether measurement models are invariant across age, gender, and education groups
-# Chapter 5.2 we do robustness check regarding age, gender, and education groups
 
 
 ### Chap. 1: PREPARATION (LOADING PACKAGES and DATA, LABELS and NAMES, CLEANING DATA) ####
