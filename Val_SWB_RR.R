@@ -145,7 +145,7 @@ gender <- c("a11d054a", "bfzh069a", "cfzh071a", "dfzh037a", "d11d054a", "d12d088
 
 # Age/Year of Birth
 
-birth_year <- c("bfzh070b", "a11d056a", "d11d056a") # we will use all variables in case there are missings in some of them
+birth_year <- c("bfzh070c", "a11d056b", "d11d056b") # we will use all variables in case there are missings in some of them
 
 # Education
 # Education will be assessed with two dummies: (a) highest degree of education is lower secondary school or less (yes/no) and (b) highest degree of education is general qualification for university entrance (the German Abitur) or higher (yes/no).
@@ -203,8 +203,8 @@ setwd(root)
 
 
 #### extracting only the variables we need
-data <- data[, c("a11d054a", "bfzh069a", "cfzh071a", "dfzh037a", "d11d054a", "d12d088a", "efzh031a", "ffzh031a", # gender
-                 "bfzh070b", "a11d056a", "d11d056a",  # year of birth
+test <- data[, c("a11d054a", "bfzh069a", "cfzh071a", "dfzh037a", "d11d054a", "d12d088a", "efzh031a", "ffzh031a", # gender
+                 "bfzh070c", "a11d056b", "d11d056b", # year of birth
                  "bfzh076a", "cfzh078a", "dfzh044a", "efzh038a", "ffzh038a", # highest education
                  ST_t2, SE_t2, OP_t2, CO_t2, 
                  ST_t4, SE_t4, OP_t4, CO_t4, 
@@ -245,10 +245,10 @@ data[is.na(data$gender), "gender"] <- data[is.na(data$gender), "efzh031a"]
 data[is.na(data$gender), "gender"] <- data[is.na(data$gender), "ffzh031a"]
 
 # age
-data$birth_year <- data[, "bfzh070b"]
-# if year of birth is a missing value in the variable "bfzh070b", we will substitute the value with the year of birth indicated at another measurement occasions 
-data[is.na(data$birth_year), "birth_year"] <- data[is.na(data$birth_year), "a11d056a"]
-data[is.na(data$birth_year), "birth_year"] <- data[is.na(data$birth_year), "d11d056a"]
+data$birth_year <- data[, "bfzh070c"]
+# if year of birth is a missing value in the variable "bfzh070c", we will substitute the value with the year of birth indicated at another measurement occasions 
+data[is.na(data$birth_year), "birth_year"] <- data[is.na(data$birth_year), "a11d056b"]
+data[is.na(data$birth_year), "birth_year"] <- data[is.na(data$birth_year), "d11d056b"]
 
 data$age <- 2014-data$birth_year
 
