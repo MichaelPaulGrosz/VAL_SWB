@@ -1194,13 +1194,13 @@ gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;"
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
 meas <- c("
-          !Setting Loadings NOT Equal Across Time
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l15-l21);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l22-l28);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l29-l35);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l36-l42);
+!Setting Loadings NOT Equal Across Time
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l15-l21);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l22-l28);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l29-l35);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l36-l42);
           
           !correlated uniqueness
           bazb005a WITH cazb005a dazb005a eazb005a fazb005a gazb005a;
@@ -1250,8 +1250,8 @@ meas <- c("
           [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
           [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
           [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i15-i21);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i22-i27);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i28-i35);
+          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i22-i28);
+          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i29-i35);
           [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i36-i42);
           
           ")
