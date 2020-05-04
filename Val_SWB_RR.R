@@ -5,10 +5,10 @@
 # R packages used (versions): gdata (2.18.0), haven (2.1.1), MplusAutomation (0.7-3)
 
 
-### Table of contents #### (see document outline)
+### for table of contents, click on "show document outline" in R Studio
 
 
-### Chap. 1: PREPARATION (LOADING PACKAGES and DATA, LABELS and NAMES, CLEANING DATA) ####
+### 1 PREPARATION (LOADING PACKAGES and DATA, LABELS and NAMES, CLEANING DATA) ####
 
 ### loadings packages
 library(gdata) # to rename variables
@@ -153,30 +153,53 @@ high_edu <- c("bfzh076a", "cfzh078a", "dfzh044a", "efzh038a", "ffzh038a") # we w
 # If the highest education changed over the course of the assessments, we will use the higher education in the analysis.
 
 
-### Loading data
+### Loading data (here we use R code provided by GESIS panel team along with the data)
+
+# This R-script puts together all data files of the GESIS Panel 
+# resulting in a single file containing all variables and all cohorts, 
+# which is structurally identical to the data files offered prior to wave
+# ec.
+
+
+# Preliminarities ---------------------------------------------------------
+
+
+filepath <- "D:/Values_SWB/Analysis/Data/stata"
+
+
+if(!("readstata13" %in% rownames(installed.packages()))){
+  install.packages("readstata13")
+}
+
+
+files <- grep(".dta",list.files(filepath),value=T)
+
+# get cohorts -------------------------------------------------------------
+
+
+a1_file <- grep("_a1_v",files,value=T)
+dat_a1 <- readstata13::read.dta13(paste0(filepath,"/",a1_file),convert.factors = F)    
+
+d1_file <- grep("_d1_v",files,value=T)
+dat_d1 <- readstata13::read.dta13(paste0(filepath,"/",d1_file),convert.factors = F)    
+
+f1_file <- grep("_f1_v",files,value=T)
+
+# merge cohort data -------------------------------------------------------
+
+if(length(f1_file)>0){
+  dat_f1 <- readstata13::read.dta13(paste0(filepath,"/",f1_file),convert.factors = F)
+  data <- merge(dat_a1,dat_d1,dat_f1,all=T)
+}else{
+  data <- merge(dat_a1,dat_d1,all=T)  
+}
+
+
+# data is the complete dataset
 
 # setting working directory
 root<- "D:/Values_SWB/Analysis" # indicating the root directory
 setwd(root)
-
-# loading several files of the data
-data1 <- read_dta("ZA5665_a1_a11-a12_v23-0-0.dta")
-data2 <- read_dta("ZA5665_a1_aa-ac_v23-0-0.dta")
-data3 <- read_dta("ZA5665_a1_ba-bf_v23-0-0.dta")
-data4 <- read_dta("ZA5665_a1_ca-cf_v23-0-0.dta")
-data5 <- read_dta("ZA5665_a1_da-df_v23-0-0.dta")
-data6 <- read_dta("ZA5665_a1_ea-ed_v23-0-0.dta")
-data7 <- read_dta("ZA5665_a1_fa-fd_v23-0-0.dta")
-data8 <- read_dta("ZA5665_a1_ga-gd_v23-0-0.dta")
-
-# merging the files
-data <- merge(data1,data2, by="z000001a",all.x=TRUE)
-data <- merge(data,data3, by="z000001a",all.x=TRUE)
-data <- merge(data,data4, by="z000001a",all.x=TRUE)
-data <- merge(data,data5, by="z000001a",all.x=TRUE)
-data <- merge(data,data6, by="z000001a",all.x=TRUE)
-data <- merge(data,data7, by="z000001a",all.x=TRUE)
-data <- merge(data,data8, by="z000001a",all.x=TRUE)
 
 
 #### extracting only the variables we need
@@ -250,7 +273,7 @@ data$edu_d <- ifelse(data$edu==9, 1, 0) # If the participant has the Abitur (gen
 
 
 
-### 2: Testing Measurement Invariance accross measurement occasions  ####
+### 2 Testing Measurement Invariance accross measurement occasions  ####
 
 
 # setting new root and working directory for measurement invariance analysis
