@@ -981,7 +981,7 @@ meas <- c("
             enha2 BY  bdze012a bdze016a bdze021a bdze025a (l1-l4);
             enha4 BY  cdze012a cdze016a cdze021a cdze025a (l5-l8);
             enha6 BY  ddze012a ddze016a ddze021a ddze025a (l9-l12);
-            enha8 BY  edze012a edze016a edze021a edze025a (l13-l6);
+            enha8 BY  edze012a edze016a edze021a edze025a (l13-l16);
             enha10 BY fdze012a fdze016a fdze021a fdze025a (l17-l20);
             enha12 BY gdze012a gdze016a gdze021a gdze025a (l21-l24);
             
