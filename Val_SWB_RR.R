@@ -272,6 +272,11 @@ data[is.na(data$edu), "edu"] <- data[is.na(data$edu), "bfzh076a"]
 data$edu_d <- ifelse(data$edu==9, 1, 0) # If the participant has the Abitur (general qualification for university entrance), then the value is 1. If not, the value is 0. 
 
 
+### recoding of negative affective SWB items
+
+neg_items.nam <- c(SWB_aff_t1[-c(4,6)], SWB_aff_t3[-c(4,6)], SWB_aff_t5[-c(4,6)], SWB_aff_t7[-c(4,6)], SWB_aff_t9[-c(4,6)],  SWB_aff_t11[-c(4,6)])
+data[ ,neg_items.nam] <- 7-data[ ,neg_items.nam]
+
 
 ### 2 Testing Measurement Invariance accross measurement occasions  ####
 
