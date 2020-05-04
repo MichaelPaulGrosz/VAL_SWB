@@ -511,7 +511,7 @@ out.names <- c("open_conf_inv.out", "open_weak_inv.out", "open_strong_inv.out")
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -711,7 +711,7 @@ out.names <- c("cons_conf_inv.out", "cons_weak_inv.out", "cons_strong_inv.out")
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
@@ -946,7 +946,7 @@ out.names <- c("trans_conf_inv.out", "trans_weak_inv.out", "trans_strong_inv.out
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
@@ -1162,7 +1162,7 @@ out.names <- c("enha_conf_inv.out", "enha_weak_inv.out", "enha_strong_inv.out")
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
@@ -1434,7 +1434,7 @@ out.names <- c("cogn_conf_inv.out", "cogn_weak_inv.out", "cogn_strong_inv.out")
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
@@ -1721,7 +1721,7 @@ out.names <- c("affe_conf_inv.out", "affe_weak_inv.out", "affe_strong_inv.out")
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
@@ -1942,12 +1942,12 @@ meas_val[[4]] <- c("
 # most labels are different at Time 1.
 
 meas_swb[[1]] <- c("
-            SWB1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l18-l24);
-            SWB3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l18-l24);
-            SWB5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l18-l24);
-            SWB7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l18-l24);
-            SWB9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l18-l24);
-            SWB11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);            
+SWB1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l18-l24);
+SWB3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l18-l24);
+SWB5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l18-l24);
+SWB7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l18-l24);
+SWB9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l18-l24);
+SWB11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);            
 
           !correlated uniqueness
           bazb005a WITH cazb005a dazb005a eazb005a fazb005a gazb005a;
@@ -2004,13 +2004,13 @@ meas_swb[[1]] <- c("
 
 
 meas_swb[[2]] <- c("
-          !Setting Loadings Equal Across Time
-          SWB1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l25-l32);
-          SWB3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l25-l32);
-          SWB5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l25-l32);
-          SWB7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l25-l32);
-          SWB9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l25-l32);
-          SWB11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l25-l32);
+!Setting Loadings Equal Across Time
+SWB1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l25-l32);
+SWB3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l25-l32);
+SWB5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l25-l32);
+SWB7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l25-l32);
+SWB9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l25-l32);
+SWB11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l25-l32);
           
           !correlated uniqueness
           bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
@@ -2301,6 +2301,18 @@ for (val in 1:4){  # val = indices for value
   }
 }
 
+
+## checking model fits and whether there were warnings 
+
+out.names <- c(value_SWB.nam[[1]][1], value_SWB.nam[[2]][1], value_SWB.nam[[3]][1], value_SWB.nam[[4]][1],
+               value_SWB.nam[[1]][2], value_SWB.nam[[2]][2], value_SWB.nam[[3]][2], value_SWB.nam[[4]][2])
+
+fit.stats <- data.frame(matrix(NA,8,13))
+colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
+for (m in 1:8){ # m = model
+  fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
+}
+fit.stats 
 
 ### 4 Robustness Check for acqiescience, scale usage, and relative importance of value ####
 
@@ -3216,7 +3228,7 @@ out.names <- c("open_conf_inv_age.out", "open_weak_inv_age.out", "open_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -3414,7 +3426,7 @@ out.names <- c("open_conf_inv_sex.out", "open_weak_inv_sex.out", "open_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -3611,7 +3623,7 @@ out.names <- c("open_conf_inv_edu.out", "open_weak_inv_edu.out", "open_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -3919,7 +3931,7 @@ out.names <- c("cons_conf_inv_age.out", "cons_weak_inv_age.out", "cons_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -4117,7 +4129,7 @@ out.names <- c("cons_conf_inv_sex.out", "cons_weak_inv_sex.out", "cons_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -4316,7 +4328,7 @@ out.names <- c("cons_conf_inv_edu.out", "cons_weak_inv_edu.out", "cons_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -4637,7 +4649,7 @@ out.names <- c("trans_conf_inv_age.out", "trans_weak_inv_age.out", "trans_strong
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -4836,7 +4848,7 @@ out.names <- c("trans_conf_inv_sex.out", "trans_weak_inv_sex.out", "trans_strong
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -5036,7 +5048,7 @@ out.names <- c("trans_conf_inv_edu.out", "trans_weak_inv_edu.out", "trans_strong
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -5349,7 +5361,7 @@ out.names <- c("enha_conf_inv_age.out", "enha_weak_inv_age.out", "enha_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -5547,7 +5559,7 @@ out.names <- c("enha_conf_inv_sex.out", "enha_weak_inv_sex.out", "enha_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -5744,7 +5756,7 @@ out.names <- c("enha_conf_inv_edu.out", "enha_weak_inv_edu.out", "enha_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -6070,7 +6082,7 @@ out.names <- c("cogn_conf_inv_age.out", "cogn_weak_inv_age.out", "cogn_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -6262,7 +6274,7 @@ out.names <- c("cogn_conf_inv_sex.out", "cogn_weak_inv_sex.out", "cogn_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -6454,7 +6466,7 @@ out.names <- c("cogn_conf_inv_edu.out", "cogn_weak_inv_edu.out", "cogn_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -6786,7 +6798,7 @@ out.names <- c("affe_conf_inv_age.out", "affe_weak_inv_age.out", "affe_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -6981,7 +6993,7 @@ out.names <- c("affe_conf_inv_sex.out", "affe_weak_inv_sex.out", "affe_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
@@ -7177,7 +7189,7 @@ out.names <- c("affe_conf_inv_edu.out", "affe_weak_inv_edu.out", "affe_strong_in
 # checking model fits
 fit.stats <- data.frame(matrix(NA,3,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
-for (m in 1:3){ # t = trait (narc vs Mach)
+for (m in 1:3){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats
