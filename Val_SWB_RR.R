@@ -2061,13 +2061,13 @@ SWB11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a
           eazb028a WITH fazb028a gazb028a;
           fazb028a WITH gazb028a;
           
-          !Setting Item Intercepts NOT Equal Across Time
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i25-i32);
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i25-i32);
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i25-i32);
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i25-i32);
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i25-i32);
+!Setting Item Intercepts NOT Equal Across Time
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i25-i32);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i25-i32);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i25-i32);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i25-i32);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i25-i32);
           
 ")
 
@@ -2304,9 +2304,11 @@ for (val in 1:4){  # val = indices for value
 
 ## checking model fits and whether there were warnings 
 
-out.names <- c(value_SWB.nam[[1]][1], value_SWB.nam[[2]][1], value_SWB.nam[[3]][1], value_SWB.nam[[4]][1],
-               value_SWB.nam[[1]][2], value_SWB.nam[[2]][2], value_SWB.nam[[3]][2], value_SWB.nam[[4]][2])
-
+out.names <- c("open_cogSWB.out", "open_affSWB.out",
+               "cons_cogSWB.out", "cons_affSWB.out",
+               "trans_cogSWB.out", "trans_affSWB.out",
+               "enha_cogSWB.out", "enha_affSWB.out")
+               
 fit.stats <- data.frame(matrix(NA,8,13))
 colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
 for (m in 1:8){ # m = model
