@@ -203,7 +203,7 @@ setwd(root)
 
 
 #### extracting only the variables we need
-test <- data[, c("a11d054a", "bfzh069a", "cfzh071a", "dfzh037a", "d11d054a", "d12d088a", "efzh031a", "ffzh031a", # gender
+data <- data[, c("a11d054a", "bfzh069a", "cfzh071a", "dfzh037a", "d11d054a", "d12d088a", "efzh031a", "ffzh031a", # gender
                  "bfzh070c", "a11d056b", "d11d056b", # year of birth
                  "bfzh076a", "cfzh078a", "dfzh044a", "efzh038a", "ffzh038a", # highest education
                  ST_t2, SE_t2, OP_t2, CO_t2, 
