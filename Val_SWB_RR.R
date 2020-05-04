@@ -1464,13 +1464,13 @@ gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;"
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
 meas <- c("
-          !Setting Loadings NOT Equal Across Time
-          affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-          affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
-          affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l17-l24);
-          affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l25-l32);
-          affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l33-l40)
-          affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l41-l48);
+!Setting Loadings NOT Equal Across Time
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a;
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a;
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a;
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a;
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a;
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
           
           !correlated uniqueness
           bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
@@ -1521,13 +1521,13 @@ meas <- c("
           eazb028a WITH fazb028a gazb028a;
           fazb028a WITH gazb028a;
 
-          !Setting Item Intercepts NOT Equal Across Time
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i33-i40);
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (l41-l48);
+!Setting Item Intercepts NOT Equal Across Time
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i33-i40);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (l41-l48);
           
           ")
 
@@ -1548,13 +1548,13 @@ output <- mplusModeler(Model, modelout="affe_conf_inv.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across measurement time)
 
 meas <- c("
-          !Setting Loadings Equal Across Time
-          affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-          affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-          affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-          affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-          affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-          affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+!Setting Loadings Equal Across Time
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
           
           !correlated uniqueness
           bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
@@ -1605,13 +1605,13 @@ meas <- c("
           eazb028a WITH fazb028a gazb028a;
           fazb028a WITH gazb028a;
           
-          !Setting Item Intercepts NOT Equal Across Time
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i33-i40);
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (l41-l48);
+!Setting Item Intercepts NOT Equal Across Time
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i33-i40);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (l41-l48);
           
           ")
 
@@ -1633,13 +1633,13 @@ output <- mplusModeler(Model, modelout="affe_weak_inv.inp", run=1, check=F)
 
 
 meas <- c("
-          !Setting Loadings Equal Across Time
-          affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-          affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-          affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-          affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-          affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-          affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+!Setting Loadings Equal Across Time
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
           
           !correlated uniqueness
           bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
@@ -1690,13 +1690,13 @@ meas <- c("
           eazb028a WITH fazb028a gazb028a;
           fazb028a WITH gazb028a;
           
-          !Setting Item Intercepts NOT Equal Across Time
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+!Setting Item Intercepts NOT Equal Across Time
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
           
           ")
 
