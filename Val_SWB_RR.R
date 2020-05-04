@@ -446,6 +446,7 @@ meas <- c("
           open4 BY cdze013a cdze018a cdze020a cdze024a cdze027a (l1-l5);
           open6 BY ddze013a ddze018a ddze020a ddze024a ddze027a (l1-l5);
           open8 BY edze013a edze018a edze020a edze024a edze027a (l1-l5);
+          open10 BY fdze013a fdze018a fdze020a fdze024a fdze027a (l1-l5);
           open12 BY gdze013a gdze018a gdze020a gdze024a gdze027a (l1-l5);
           
           !correlated uniqueness
