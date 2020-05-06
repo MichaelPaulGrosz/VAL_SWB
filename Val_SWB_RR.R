@@ -230,6 +230,17 @@ data[data=="-22"]=NA # Not in panel
 data[data=="-11"]=NA # Not invited
 data[data==""]=NA
 
+# On current life satisfaction items, people could respond "weiß nicht" (don't know) 
+# We will recode these responses to NA 
+apply(data[,c("bazb005a", "cazb005a", "dazb005a", "eazb005a", "fazb005a", "gazb005a")],2,table) 
+
+data$bazb005a[data$bazb005a==98] <- NA
+data$cazb005a[data$cazb005a==98] <- NA
+data$dazb005a[data$dazb005a==98] <- NA
+data$eazb005a[data$eazb005a==98] <- NA
+data$fazb005a[data$fazb005a==98] <- NA
+data$gazb005a[data$gazb005a==98] <- NA
+
 
 ### preparing gender, age, and education variable
 
@@ -1846,12 +1857,12 @@ meas_val[[2]] <- c("
 # self-transcendence values
 meas_val[[3]] <- c("
             !Setting Loadings Equal Across Time
-            VAL2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l9-l13);
-            VAL4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l9-l13);
-            VAL6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l9-l13);
-            VAL8 BY edze011a edze015a edze019a edze023a edze026a  (l9-l13);
-            VAL10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l9-l13);
-            VAL12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l9-l13);
+            VAL2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l9-l13);
+            VAL4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l9-l13);
+            VAL6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l9-l13);
+            VAL8 BY edze015a edze011a edze019a edze023a edze026a  (l9-l13);
+            VAL10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l9-l13);
+            VAL12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l9-l13);
             
             !correlated uniqueness
             bdze011a WITH cdze011a ddze011a edze011a fdze011a gdze011a;
@@ -1885,12 +1896,12 @@ meas_val[[3]] <- c("
             fdze026a WITH gdze026a;
             
             !Setting Item Intercepts Equal Across Time
-            [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i9-i13);
-            [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i9-i13);
-            [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i9-i13);
-            [edze011a@0 edze015a edze019a edze023a edze026a] (i9-i13);
-            [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i9-i13);
-            [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i9-i13);
+            [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i9-i13);
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i9-i13);
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i9-i13);
+            [edze015a@0 edze011a edze019a edze023a edze026a] (i9-i13);
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i9-i13);
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i9-i13);
             
                  ")
 
@@ -1952,7 +1963,7 @@ SWB3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l18-l24)
 SWB5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l18-l24);
 SWB7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l18-l24);
 SWB9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l18-l24);
-SWB11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);            
+SWB11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);
 
           !correlated uniqueness
           bazb005a WITH cazb005a dazb005a eazb005a fazb005a gazb005a;
@@ -1998,12 +2009,12 @@ SWB11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24
           fazb019a WITH gazb019a;
 
 
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i18-i24);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i18-i24);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i18-i24);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i18-i24);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i18-i24);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i18-i24);
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i18-i24);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i18-i24);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i18-i24);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i18-i24);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i18-i24);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i18-i24);
                     
                   ")
 
@@ -2174,8 +2185,8 @@ for (val in 1:4){  # val = indices for value
                 [eta_swb@0];
                 
                 !Estimate variances of random intercept;
-                eta_val;
-                eta_swb;
+                eta_val*.379;
+                eta_swb*.495;
                 
                 ! allowing for covariances among random intercepts
                 eta_val with eta_swb;
@@ -2224,15 +2235,15 @@ for (val in 1:4){  # val = indices for value
                 
                 !Set equal the variances of the 'residuals of the residuals'
                 !Freely estimate t1 structured residual.
-                L_val2 (r1a);
-                L_val4 (r1);
+                L_val2*.115 (r1a);
+                L_val4*.091 (r1);
                 L_val6 (r1);
                 L_val8 (r1);
                 L_val10 (r1);
                 L_val12 (r1);
-                L_swb1 (r2a);
-                L_swb3 (r2b);
-                L_swb5 (r2);
+                L_swb1*.345 (r2a);
+                L_swb3*.323 (r2b);
+                L_swb5*.258 (r2);
                 L_swb7 (r2);
                 L_swb9 (r2);
                 L_swb11 (r2);
@@ -2299,9 +2310,9 @@ for (val in 1:4){  # val = indices for value
     Model <- mplusObject(
       VARIABLE=ITEMS,
       usevariables = names(data),
-      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
       MODEL=MODEL,rdata=data,autov=T,
-      OUTPUT="STDYX;")
+      OUTPUT="STDYX CINTERVAL;")
     output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
   }
 }
@@ -2320,6 +2331,8 @@ for (m in 1:8){ # m = model
   fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
 }
 fit.stats 
+
+
 
 ### 4 Robustness Check for acqiescience, scale usage, and relative importance of value ####
 
