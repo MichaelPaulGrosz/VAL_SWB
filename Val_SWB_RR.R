@@ -2185,8 +2185,8 @@ for (val in 1:4){  # val = indices for value
                 [eta_swb@0];
                 
                 !Estimate variances of random intercept;
-                eta_val*.379;
-                eta_swb*.495;
+                eta_val*.412;
+                eta_swb*.668;
                 
                 ! allowing for covariances among random intercepts
                 eta_val with eta_swb;
@@ -2235,15 +2235,15 @@ for (val in 1:4){  # val = indices for value
                 
                 !Set equal the variances of the 'residuals of the residuals'
                 !Freely estimate t1 structured residual.
-                L_val2*.115 (r1a);
-                L_val4*.091 (r1);
+                L_val2*.048 (r1a);
+                L_val4*.063 (r1);
                 L_val6 (r1);
                 L_val8 (r1);
                 L_val10 (r1);
                 L_val12 (r1);
-                L_swb1*.345 (r2a);
-                L_swb3*.323 (r2b);
-                L_swb5*.258 (r2);
+                L_swb1*.505 (r2a);
+                L_swb3*.400 (r2b);
+                L_swb5*.302 (r2);
                 L_swb7 (r2);
                 L_swb9 (r2);
                 L_swb11 (r2);
@@ -2392,8 +2392,8 @@ for (val in 1:4){  # val = indices for value
                 [eta_swb@0];
                 
                 !Estimate variances of random intercept;
-                eta_val;
-                eta_swb;
+                eta_val*.412;
+                eta_swb*.668;
                 
                 ! allowing for covariances among random intercepts
                 eta_val with eta_swb;
@@ -2442,15 +2442,15 @@ for (val in 1:4){  # val = indices for value
                 
                 !Set equal the variances of the 'residuals of the residuals'
                 !Freely estimate t1 structured residual.
-                L_val2 (r1a);
-                L_val4 (r1);
+                L_val2*.048 (r1a);
+                L_val4*.063 (r1);
                 L_val6 (r1);
                 L_val8 (r1);
                 L_val10 (r1);
                 L_val12 (r1);
-                L_swb1 (r2a);
-                L_swb3 (r2b);
-                L_swb5 (r2);
+                L_swb1*.505 (r2a);
+                L_swb3*.400 (r2b);
+                L_swb5*.302 (r2);
                 L_swb7 (r2);
                 L_swb9 (r2);
                 L_swb11 (r2);
@@ -2517,12 +2517,27 @@ for (val in 1:4){  # val = indices for value
     Model <- mplusObject(
       VARIABLE=ITEMS,
       usevariables = names(data_ips),
-      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
       MODEL=MODEL,rdata=data_ips,autov=T,
-      OUTPUT="STDYX;")
+      OUTPUT="STDYX CINTERVAL;")
     output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
   }
 }
+
+
+## checking model fits and whether there were warnings 
+
+out.names <- c("open_cogSWB.out", "open_affSWB.out",
+               "cons_cogSWB.out", "cons_affSWB.out",
+               "trans_cogSWB.out", "trans_affSWB.out",
+               "enha_cogSWB.out", "enha_affSWB.out")
+
+fit.stats <- data.frame(matrix(NA,8,13))
+colnames(fit.stats) <- c("Event Aggr","N","CFI", "TLI", "RMSEA", "SRMR", "AIC", "BIC", "Chi_square", "Parameters","Warnings", "Errors", "Non-Positive Matrix")
+for (m in 1:8){ # m = model
+  fit.stats[m,] <- as.vector(extr.Mplus.fit(out.names[m])[,2])
+}
+fit.stats 
 
 
 
