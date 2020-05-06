@@ -74,7 +74,7 @@ extr.Mplus.fit <- function(file.out="", fit.indices=TRUE )
       if(length(BIC)>0){
         df.fit[8,file.out] <- as.numeric(substr(TEXT[BIC],40,55))
       }
-      chi_sq <- grep("Value                           ",TEXT)[1]
+      chi_sq <- grep("Value                          ",TEXT)[1]
       if(length(chi_sq)>0){
         df.fit[9,file.out] <- as.numeric(substr(TEXT[chi_sq],35,50))
       }
