@@ -3097,7 +3097,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_conf_inv_age.inp", run=1, check=F)
@@ -3173,7 +3173,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_weak_inv_age.inp", run=1, check=F)
@@ -5174,12 +5174,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5195,12 +5195,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l5-l8);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5216,12 +5216,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l9-l12);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i9-i12);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i9-i12);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i9-i12);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i9-i12);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i9-i12);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i9-i12);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i9-i12);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i9-i12);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i9-i12);
+                [edze012a@0 edze016a edze021a edze025a] (i9-i12);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i9-i12);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i9-i12);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5251,12 +5251,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5272,12 +5272,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5293,12 +5293,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i9-i12);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i9-i12);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i9-i12);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i9-i12);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i9-i12);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i9-i12);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i9-i12);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i9-i12);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i9-i12);
+                [edze012a@0 edze016a edze021a edze025a] (i9-i12);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i9-i12);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i9-i12);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5327,12 +5327,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5348,12 +5348,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5369,12 +5369,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5434,12 +5434,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5455,12 +5455,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l5-l8);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5490,12 +5490,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5511,12 +5511,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5546,12 +5546,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5567,12 +5567,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5632,12 +5632,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5653,12 +5653,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l5-l8);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5688,12 +5688,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5709,12 +5709,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i5-i8);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i5-i8);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i5-i8);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i5-i8);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i5-i8);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i5-i8);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i5-i8);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i5-i8);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i5-i8);
+                [edze012a@0 edze016a edze021a edze025a] (i5-i8);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i5-i8);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i5-i8);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5743,12 +5743,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5764,12 +5764,12 @@ MODEL <- paste0(meas,"
                 enha12 BY gdze012a gdze016a gdze021a gdze025a (l1-l4);
                 
                 !Setting Item Intercepts
-                [bdze013a@0 bdze018a bdze020a bdze024a bdze027a] (i1-i4);
-                [cdze013a@0 cdze018a cdze020a cdze024a cdze027a] (i1-i4);
-                [ddze013a@0 ddze018a ddze020a ddze024a ddze027a] (i1-i4);
-                [edze013a@0 edze018a edze020a edze024a edze027a] (i1-i4);
-                [fdze013a@0 fdze018a fdze020a fdze024a fdze027a] (i1-i4);
-                [gdze013a@0 gdze018a gdze020a gdze024a gdze027a] (i1-i4);
+                [bdze012a@0 bdze016a bdze021a bdze025a] (i1-i4);
+                [cdze012a@0 cdze016a cdze021a cdze025a] (i1-i4);
+                [ddze012a@0 ddze016a ddze021a ddze025a] (i1-i4);
+                [edze012a@0 edze016a edze021a edze025a] (i1-i4);
+                [fdze012a@0 fdze016a fdze021a fdze025a] (i1-i4);
+                [gdze012a@0 gdze016a gdze021a gdze025a] (i1-i4);
                 
                 !freely estimate occasion-specific grand means 
                 [enha2 enha4 enha6 enha8 enha10 enha12];
@@ -5819,13 +5819,13 @@ grouping is age_c (1=YOUNG 2=MIDDLE 3=OLD);"
 
 
 meas <- c("
-          !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a;
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a;
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a;
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a;
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a;
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a;
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a;
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a;
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a;
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a;
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;
           
           !correlated uniqueness
           bazb005a WITH cazb005a dazb005a eazb005a fazb005a gazb005a;
@@ -5870,13 +5870,13 @@ meas <- c("
           eazb019a WITH fazb019a gazb019a;
           fazb019a WITH gazb019a;
           
-          !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a];
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a];
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a];
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a];
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a];
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a];
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a];
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a];
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a];
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a];
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a];
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a];
           
           !freely estimate occasion-specific grand means 
           [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -5891,13 +5891,13 @@ meas <- c("
 
 MODEL <- paste0(meas,"
          MODEL YOUNG:
-          !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
           
           !Setting Item Intercepts
           [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
@@ -5910,42 +5910,42 @@ MODEL <- paste0(meas,"
           !freely estimate occasion-specific grand means 
           [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
 
-          MODEL MIDDLE:
-          !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
+MODEL MIDDLE:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
           
-          !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
                 
           !freely estimate occasion-specific grand means 
           [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
 
-          MODEL OLD:
-          !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l15-l21);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l15-l21);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l15-l21);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l15-l21);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l15-l21);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l15-l21);
+MODEL OLD:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l15-l21);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l15-l21);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l15-l21);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l15-l21);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l15-l21);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l15-l21);
           
-          !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i15-i21);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i15-i21);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i15-i21);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i15-i21);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i15-i21);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i15-i21);
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i15-i21);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i15-i21);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i15-i21);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i15-i21);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i15-i21);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i15-i21);
           
           !freely estimate occasion-specific grand means 
           [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -5964,62 +5964,62 @@ output <- mplusModeler(Model, modelout="cogn_conf_inv_age.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL YOUNG:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+MODEL YOUNG:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
                 
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
-                
-                !freely estimate occasion-specific grand means 
-                [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
-                
-                MODEL MIDDLE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
-                MODEL OLD:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+MODEL MIDDLE:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
                 
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i15-i21);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i15-i21);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i15-i21);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i15-i21);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i15-i21);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i15-i21);
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+                
+                !freely estimate occasion-specific grand means 
+                [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
+                
+MODEL OLD:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+                
+!Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i15-i21);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i15-i21);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i15-i21);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i15-i21);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i15-i21);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i15-i21);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6039,62 +6039,62 @@ output <- mplusModeler(Model, modelout="cogn_weak_inv_age.inp", run=1, check=F)
 # 3. strong invariance (loadings and intercepts equal across age groups) 
 
 MODEL <- paste0(meas,"
-                MODEL YOUNG:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+MODEL YOUNG:
+!Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
                 
                 !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
                 MODEL MIDDLE:
                 !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
                 
                 !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
                 MODEL OLD:
                 !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6143,42 +6143,42 @@ grouping is gender (1=MALE 2=FEMALE);"
 ## 1. configural invariance (loadings and intercept are NOT equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL MALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
-                MODEL FEMALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+      MODEL FEMALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6196,42 +6196,42 @@ output <- mplusModeler(Model, modelout="cogn_conf_inv_sex.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL MALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
-                MODEL FEMALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+      MODEL FEMALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6251,42 +6251,42 @@ output <- mplusModeler(Model, modelout="cogn_weak_inv_sex.inp", run=1, check=F)
 # 3. strong invariance (loadings and intercepts equal across age groups) 
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL MALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
-                MODEL FEMALE:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL FEMALE:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6335,42 +6335,42 @@ grouping is edu_d (0=LOW 1=HIGH);"
 ## 1. configural invariance (loadings and intercept are NOT equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL LOW:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
                 
-                MODEL HIGH:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+      MODEL HIGH:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l8-l14);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l8-l14);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l8-l14);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l8-l14);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l8-l14);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6388,42 +6388,42 @@ output <- mplusModeler(Model, modelout="cogn_conf_inv_edu.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
-                
-                !freely estimate occasion-specific grand means 
-                [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
-                
-                MODEL HIGH:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
+      MODEL LOW:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      
+      !freely estimate occasion-specific grand means 
+      [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
+      
+      MODEL HIGH:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i8-i14);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i8-i14);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i8-i14);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i8-i14);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i8-i14);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i8-i14);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6443,42 +6443,42 @@ output <- mplusModeler(Model, modelout="cogn_weak_inv_edu.inp", run=1, check=F)
 # 3. strong invariance (loadings and intercepts equal across age groups) 
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
-                
-                !freely estimate occasion-specific grand means 
-                [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
-                
-                MODEL HIGH:
-                !Setting Loadings
-          cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
-          cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
-          cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
-          cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
-          cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
-          cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
-                
-                !Setting Item Intercepts
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      MODEL LOW:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
+      
+      !freely estimate occasion-specific grand means 
+      [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
+      
+      MODEL HIGH:
+      !Setting Loadings
+cogn1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l1-l7);
+cogn3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l1-l7);
+cogn5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l1-l7);
+cogn7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l1-l7);
+cogn9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l1-l7);
+cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7);
+      
+      !Setting Item Intercepts
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i1-i7);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i1-i7);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i1-i7);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i1-i7);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i1-i7);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i1-i7);
                 
                 !freely estimate occasion-specific grand means 
                 [cogn1 cogn3 cogn5 cogn7 cogn9 cogn11];
@@ -6529,76 +6529,70 @@ grouping is age_c (1=YOUNG 2=MIDDLE 3=OLD);"
 
 
 meas <- c("
-          !Setting Loadings
-          affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a;
-          affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a;
-          affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a;
-          affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a;
-          affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a;
-          affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
-          
-          !correlated uniqueness
-          bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
-          cazb021a WITH dazb021a eazb021a fazb021a gazb021a;
-          dazb021a WITH eazb021a fazb021a gazb021a;
-          eazb021a WITH fazb021a gazb021a;
-          fazb021a WITH gazb021a;
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a;
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a;
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a;
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a;
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a;
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
 
-          bazb020a WITH cazb022a dazb022a eazb022a fazb022a gazb022a;
-          cazb022a WITH dazb022a eazb022a fazb022a gazb022a;
-          dazb022a WITH eazb022a fazb022a gazb022a;
-          eazb022a WITH fazb022a gazb022a;
-          fazb022a WITH gazb022a;
+!correlated uniqueness
+bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
+cazb021a WITH dazb021a eazb021a fazb021a gazb021a;
+dazb021a WITH eazb021a fazb021a gazb021a;
+eazb021a WITH fazb021a gazb021a;
+fazb021a WITH gazb021a;
+bazb020a WITH cazb022a dazb022a eazb022a fazb022a gazb022a;
+cazb022a WITH dazb022a eazb022a fazb022a gazb022a;
+dazb022a WITH eazb022a fazb022a gazb022a;
+eazb022a WITH fazb022a gazb022a;
+fazb022a WITH gazb022a;
+bazb021a WITH cazb023a dazb023a eazb023a fazb023a gazb023a;
+cazb023a WITH dazb023a eazb023a fazb023a gazb023a;
+dazb023a WITH eazb023a fazb023a gazb023a;
+eazb023a WITH fazb023a gazb023a;
+fazb023a WITH gazb023a;
 
-          bazb021a WITH cazb023a dazb023a eazb023a fazb023a gazb023a;
-          cazb023a WITH dazb023a eazb023a fazb023a gazb023a;
-          dazb023a WITH eazb023a fazb023a gazb023a;
-          eazb023a WITH fazb023a gazb023a;
-          fazb023a WITH gazb023a;
-          
-          bazb022a WITH cazb024a dazb024a eazb024a fazb024a gazb024a;
-          cazb024a WITH dazb024a eazb024a fazb024a gazb024a;
-          dazb024a WITH eazb024a fazb024a gazb024a;
-          eazb024a WITH fazb024a gazb024a;
-          fazb024a WITH gazb024a;
+bazb022a WITH cazb024a dazb024a eazb024a fazb024a gazb024a;
+cazb024a WITH dazb024a eazb024a fazb024a gazb024a;
+dazb024a WITH eazb024a fazb024a gazb024a;
+eazb024a WITH fazb024a gazb024a;
+fazb024a WITH gazb024a;
+bazb023a WITH cazb025a dazb025a eazb025a fazb025a gazb025a;
+cazb025a WITH dazb025a eazb025a fazb025a gazb025a;
+dazb025a WITH eazb025a fazb025a gazb025a;
+eazb025a WITH fazb025a gazb025a;
+fazb025a WITH gazb025a;
+bazb024a WITH cazb026a dazb026a eazb026a fazb026a gazb026a;
+cazb026a WITH dazb026a eazb026a fazb026a gazb026a;
+dazb026a WITH eazb026a fazb026a gazb026a;
+eazb026a WITH fazb026a gazb026a;
+fazb026a WITH gazb026a;
+bazb025a WITH cazb027a dazb027a eazb027a fazb027a gazb027a;
+cazb027a WITH dazb027a eazb027a fazb027a gazb027a;
+dazb027a WITH eazb027a fazb027a gazb027a;
+eazb027a WITH fazb027a gazb027a;
+fazb027a WITH gazb027a;
+bazb026a WITH cazb028a dazb028a eazb028a fazb028a gazb028a;
+cazb028a WITH dazb028a eazb028a fazb028a gazb028a;
+dazb028a WITH eazb028a fazb028a gazb028a;
+eazb028a WITH fazb028a gazb028a;
+fazb028a WITH gazb028a;
 
-          bazb023a WITH cazb025a dazb025a eazb025a fazb025a gazb025a;
-          cazb025a WITH dazb025a eazb025a fazb025a gazb025a;
-          dazb025a WITH eazb025a fazb025a gazb025a;
-          eazb025a WITH fazb025a gazb025a;
-          fazb025a WITH gazb025a;
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a];
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a];
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a];
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a];
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a];
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a];
 
-          bazb024a WITH cazb026a dazb026a eazb026a fazb026a gazb026a;
-          cazb026a WITH dazb026a eazb026a fazb026a gazb026a;
-          dazb026a WITH eazb026a fazb026a gazb026a;
-          eazb026a WITH fazb026a gazb026a;
-          fazb026a WITH gazb026a;
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
 
-          bazb025a WITH cazb027a dazb027a eazb027a fazb027a gazb027a;
-          cazb027a WITH dazb027a eazb027a fazb027a gazb027a;
-          dazb027a WITH eazb027a fazb027a gazb027a;
-          eazb027a WITH fazb027a gazb027a;
-          fazb027a WITH gazb027a;
-
-          bazb026a WITH cazb028a dazb028a eazb028a fazb028a gazb028a;
-          cazb028a WITH dazb028a eazb028a fazb028a gazb028a;
-          dazb028a WITH eazb028a fazb028a gazb028a;
-          eazb028a WITH fazb028a gazb028a;
-          fazb028a WITH gazb028a;
-          
-          !Setting Item Intercepts
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a];
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a];
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a];
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a];
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a];
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a];
-          
-          !freely estimate occasion-specific grand means 
-          [affe1 affe3 affe5 affe7 affe9 affe11];
-          
-          !factor variances are all free
-          affe1 affe3 affe5 affe7 affe9 affe11;
+!factor variances are all free
+affe1 affe3 affe5 affe7 affe9 affe11;
           ")
 
 
@@ -6606,65 +6600,65 @@ meas <- c("
 
 
 MODEL <- paste0(meas,"
-                MODEL YOUNG:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL MIDDLE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL OLD:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l17-l24);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l17-l24);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l17-l24);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l17-l24);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l17-l24);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l17-l24);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i17-i24);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i17-i24);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i17-i24);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i17-i24);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL YOUNG:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL MIDDLE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL OLD:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l17-l24);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l17-l24);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l17-l24);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l17-l24);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l17-l24);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l17-l24);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i17-i24);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i17-i24);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i17-i24);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i17-i24);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 Model <- mplusObject(
@@ -6680,65 +6674,65 @@ output <- mplusModeler(Model, modelout="affe_conf_inv_age.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL YOUNG:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL MIDDLE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL OLD:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i17-i24);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i17-i24);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i17-i24);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i17-i24);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL YOUNG:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL MIDDLE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL OLD:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i17-i24);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i17-i24);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i17-i24);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i17-i24);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i17-i24);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
@@ -6755,65 +6749,65 @@ output <- mplusModeler(Model, modelout="affe_weak_inv_age.inp", run=1, check=F)
 # 3. strong invariance (loadings and intercepts equal across age groups) 
 
 MODEL <- paste0(meas,"
-                MODEL YOUNG:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL MIDDLE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL OLD:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL YOUNG:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL MIDDLE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL OLD:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
@@ -6861,45 +6855,45 @@ grouping is gender (1=MALE 2=FEMALE);"
 
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL FEMALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL MALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL FEMALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 Model <- mplusObject(
@@ -6915,45 +6909,45 @@ output <- mplusModeler(Model, modelout="affe_conf_inv_sex.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL FEMALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL MALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL FEMALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
@@ -6970,45 +6964,45 @@ output <- mplusModeler(Model, modelout="affe_weak_inv_sex.inp", run=1, check=F)
 # 3. strong invariance (loadings and intercepts equal across age groups) 
 
 MODEL <- paste0(meas,"
-                MODEL MALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL FEMALE:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL MALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL FEMALE:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
@@ -7056,45 +7050,45 @@ grouping is edu_d (0=LOW 1=HIGH);"
 ## 1. configural invariance (loadings and intercept are NOT equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL HIGH:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL LOW:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL HIGH:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l9-l16);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l9-l16);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 Model <- mplusObject(
@@ -7110,45 +7104,45 @@ output <- mplusModeler(Model, modelout="affe_conf_inv_edu.inp", run=1, check=F)
 # 2. weak invariance (loadings but not intercepts equal across age groups)
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL HIGH:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL LOW:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL HIGH:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i9-i16);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i9-i16);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i9-i16);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i9-i16);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i9-i16);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
@@ -7166,45 +7160,45 @@ output <- mplusModeler(Model, modelout="affe_weak_inv_edu.inp", run=1, check=F)
 
 
 MODEL <- paste0(meas,"
-                MODEL LOW:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
-                
-                MODEL HIGH:
-                !Setting Loadings
-                affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-                affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-                affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-                affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-                affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-                affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
-                
-                !Setting Item Intercepts
-                [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
-                [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
-                [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
-                [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
-                [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
-                [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
-                
-                !freely estimate occasion-specific grand means 
-                [affe1 affe3 affe5 affe7 affe9 affe11];
+MODEL LOW:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
+
+MODEL HIGH:
+!Setting Loadings
+affe1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+
+!Setting Item Intercepts
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i1-i8);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i1-i8);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i1-i8);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i1-i8);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i1-i8);
+
+!freely estimate occasion-specific grand means 
+[affe1 affe3 affe5 affe7 affe9 affe11];
                 ")
 
 
