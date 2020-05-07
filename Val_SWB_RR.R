@@ -2555,13 +2555,13 @@ setwd(file.path(root, "cog_vs_aff"))
 # most labels are different at Time 1.
 
 meas_2swb <- c("
-            !Cognitive SWB
-            COG1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l18-l24);
-            COG3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l18-l24);
-            COG5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l18-l24);
-            COG7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l18-l24);
-            COG9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l18-l24);
-            COG11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);
+!Cognitive SWB
+COG1 BY bazb005a bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a (l18-l24);
+COG3 BY cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a (l18-l24);
+COG5 BY dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a (l18-l24);
+COG7 BY eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a (l18-l24);
+COG9 BY fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a (l18-l24);
+COG11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l18-l24);
 
           !correlated uniqueness
           bazb005a WITH cazb005a dazb005a eazb005a fazb005a gazb005a;
@@ -2606,21 +2606,21 @@ meas_2swb <- c("
           eazb019a WITH fazb019a gazb019a;
           fazb019a WITH gazb019a;
 
-          [bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i18-i24);
-          [cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i18-i24);
-          [dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i18-i24);
-          [eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i18-i24);
-          [fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i18-i24);
-          [gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i18-i24);
+[bazb005a@0 bazb013a bazb014a bazb015a bazb016a bazb017a bazb018a] (i18-i24);
+[cazb005a@0 cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a] (i18-i24);
+[dazb005a@0 dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a] (i18-i24);
+[eazb005a@0 eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a] (i18-i24);
+[fazb005a@0 fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a] (i18-i24);
+[gazb005a@0 gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a] (i18-i24);
 
 
-          !Affective SWB
-          AFF1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
-          AFF3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
-          AFF5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
-          AFF7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
-          AFF9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-          AFF11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+!Affective SWB
+AFF1 BY bazb019a bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a (l1-l8);
+AFF3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a (l1-l8);
+AFF5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
+AFF7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
+AFF9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
+AFF11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
           
           !correlated uniqueness
           bazb019a WITH cazb021a dazb021a eazb021a fazb021a gazb021a;
@@ -2671,13 +2671,13 @@ meas_2swb <- c("
           eazb028a WITH fazb028a gazb028a;
           fazb028a WITH gazb028a;
           
-          !Setting Item Intercepts NOT Equal Across Time
-          [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i25-i32);
-          [cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i25-i32);
-          [dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i25-i32);
-          [eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
-          [fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i25-i32);
-          [gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i25-i32);
+!Setting Item Intercepts NOT Equal Across Time
+[bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i25-i32);
+[cazb021a@0 cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a] (i25-i32);
+[dazb021a@0 dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a] (i25-i32);
+[eazb021a@0 eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a] (i25-i32);
+[fazb021a@0 fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a] (i25-i32);
+[gazb021a@0 gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a] (i25-i32);
  
                   ")
 
@@ -2742,8 +2742,8 @@ for (val in 1:4){  # val = indices for value
                 
                 !Estimate variances of random intercept;
                 eta_val;
-                eta_cog;
-                eta_aff;
+                eta_cog*.668;
+                eta_aff*.495;
                 
                 ! allowing for covariances among random intercepts
                 eta_val with eta_cog eta_aff;
@@ -2936,9 +2936,9 @@ for (val in 1:4){  # val = indices for value
     Model <- mplusObject(
       VARIABLE=ITEMS,
       usevariables = names(data),
-      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
       MODEL=MODEL,rdata=data,autov=T,
-      OUTPUT="STDYX;")
+      OUTPUT="STDYX CINTERVAL;")
     output <- mplusModeler(Model, modelout=paste0(value_2SWB.nam[[val]], ".inp"), run=1, check=F)
 }
 
