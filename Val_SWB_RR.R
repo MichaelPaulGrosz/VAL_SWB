@@ -760,12 +760,12 @@ AUXILIARY = (M) gender age edu_d;"
 
 meas <- c("
             !Setting Loadings NOT Equal Across Time
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l6-l10);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l11-l15);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l16-l20);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l21-l25);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l26-l30);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l6-l10);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l11-l15);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l16-l20);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l21-l25);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l26-l30);
 
             !correlated uniqueness
             bdze011a WITH cdze011a ddze011a edze011a fdze011a gdze011a;
@@ -799,12 +799,12 @@ meas <- c("
             fdze026a WITH gdze026a;
 
             !Setting Item Intercepts NOT Equal Across Time
-            [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-            [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-            [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i11-i15);
-            [edze011a@0 edze015a edze019a edze023a edze026a] (i16-i20);
-            [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i21-i25);
-            [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i26-i30);
+            [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
+            [edze015a@0 edze011a edze019a edze023a edze026a] (i16-i20);
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i21-i25);
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i26-i30);
                  
                  ")
 
@@ -826,12 +826,12 @@ output <- mplusModeler(Model, modelout="trans_conf_inv.inp", run=1, check=F)
 
 meas <- c("
             !Setting Loadings Equal Across Time
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
 
             !correlated uniqueness
             bdze011a WITH cdze011a ddze011a edze011a fdze011a gdze011a;
@@ -865,12 +865,12 @@ meas <- c("
             fdze026a WITH gdze026a;
             
             !Setting Item Intercepts NOT Equal Across Time
-            [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-            [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-            [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i11-i15);
-            [edze011a@0 edze015a edze019a edze023a edze026a] (i16-i20);
-            [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i21-i25);
-            [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i26-i30);
+            [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
+            [edze015a@0 edze011a edze019a edze023a edze026a] (i16-i20);
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i21-i25);
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i26-i30);
                  
                  ")
 
@@ -893,12 +893,12 @@ output <- mplusModeler(Model, modelout="trans_weak_inv.inp", run=1, check=F)
 
 meas <- c("
             !Setting Loadings Equal Across Time
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
 
             !correlated uniqueness
             bdze011a WITH cdze011a ddze011a edze011a fdze011a gdze011a;
@@ -932,12 +932,12 @@ meas <- c("
             fdze026a WITH gdze026a;
             
             !Setting Item Intercepts NOT Equal Across Time
-            [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-            [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-            [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i11-i15);
-            [edze011a@0 edze015a edze019a edze023a edze026a] (i16-i20);
-            [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i21-i25);
-            [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i26-i30);
+            [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
+            [edze015a@0 edze011a edze019a edze023a edze026a] (i16-i20);
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i21-i25);
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i26-i30);
                  
                  ")
 
@@ -4393,12 +4393,12 @@ grouping is age_c (1=YOUNG 2=MIDDLE 3=OLD);"
 
 meas <- c("
           !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a;
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a;
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a;
-            trans8 BY edze011a edze015a edze019a edze023a edze026a;
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a;
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a;
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a;
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a;
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a;
+            trans8 BY edze015a edze011a edze019a edze023a edze026a;
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a;
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a;
             
             !correlated uniqueness
             bdze011a WITH cdze011a ddze011a edze011a fdze011a gdze011a;
@@ -4432,12 +4432,12 @@ meas <- c("
             fdze026a WITH gdze026a;
 
             !Setting Item Intercepts
-            [bdze011a@0 bdze015a bdze019a bdze023a bdze026a];
-            [cdze011a@0 cdze015a cdze019a cdze023a cdze026a];
-            [ddze011a@0 ddze015a ddze019a ddze023a ddze026a];
-            [edze011a@0 edze015a edze019a edze023a edze026a];
-            [fdze011a@0 fdze015a fdze019a fdze023a fdze026a];
-            [gdze011a@0 gdze015a gdze019a gdze023a gdze026a];
+            [bdze015a@0 bdze011a bdze019a bdze023a bdze026a];
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a];
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a];
+            [edze015a@0 edze011a edze019a edze023a edze026a];
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a];
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a];
             
             !freely estimate occasion-specific grand means 
             [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4452,20 +4452,20 @@ meas <- c("
 MODEL <- paste0(meas,"
                 MODEL YOUNG:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4473,20 +4473,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL MIDDLE:
                 !Setting Loadings
-                trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a (l6-l10);
-                trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a (l6-l10);
-                trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a (l6-l10);
-                trans8 BY edze011a edze015a edze019a edze023a edze026a (l6-l10);
-                trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a (l6-l10);
-                trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a (l6-l10);
+                trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a (l6-l10);
+                trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a (l6-l10);
+                trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a (l6-l10);
+                trans8 BY edze015a edze011a edze019a edze023a edze026a (l6-l10);
+                trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a (l6-l10);
+                trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a (l6-l10);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4494,20 +4494,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL OLD:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a (l11-l15);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a (l11-l15);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a (l11-l15);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a (l11-l15);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a (l11-l15);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a (l11-l15);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a (l11-l15);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a (l11-l15);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a (l11-l15);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a (l11-l15);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a (l11-l15);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a (l11-l15);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i11-i15);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i11-i15);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i11-i15);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i11-i15);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i11-i15);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i11-i15);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i11-i15);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i11-i15);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i11-i15);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i11-i15);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i11-i15);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4529,20 +4529,20 @@ output <- mplusModeler(Model, modelout="trans_conf_inv_age.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL YOUNG:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4550,20 +4550,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL MIDDLE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4571,20 +4571,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL OLD:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i11-i15);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i11-i15);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i11-i15);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i11-i15);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i11-i15);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i11-i15);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i11-i15);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i11-i15);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i11-i15);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i11-i15);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i11-i15);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4606,20 +4606,20 @@ output <- mplusModeler(Model, modelout="trans_weak_inv_age.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL YOUNG:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4627,20 +4627,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL MIDDLE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4648,20 +4648,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL OLD:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4713,20 +4713,20 @@ grouping is gender (1=MALE 2=FEMALE);"
 MODEL <- paste0(meas,"
                 MODEL MALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4734,20 +4734,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL FEMALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l6-l10);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l6-l10);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l6-l10);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l6-l10);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l6-l10);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l6-l10);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l6-l10);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l6-l10);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l6-l10);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l6-l10);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l6-l10);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l6-l10);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4769,20 +4769,20 @@ output <- mplusModeler(Model, modelout="trans_conf_inv_sex.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL MALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4790,20 +4790,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL FEMALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4826,20 +4826,20 @@ output <- mplusModeler(Model, modelout="trans_weak_inv_sex.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL MALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4847,20 +4847,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL FEMALE:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4913,20 +4913,20 @@ grouping is edu_d (0=LOW 1=HIGH);"
 MODEL <- paste0(meas,"
                 MODEL LOW:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4934,20 +4934,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL HIGH:
                 !Setting Loadings
-                trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a (l6-l10);
-                trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a (l6-l10);
-                trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a (l6-l10);
-                trans8 BY edze011a edze015a edze019a edze023a edze026a (l6-l10);
-                trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a (l6-l10);
-                trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a (l6-l10);
+                trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a (l6-l10);
+                trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a (l6-l10);
+                trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a (l6-l10);
+                trans8 BY edze015a edze011a edze019a edze023a edze026a (l6-l10);
+                trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a (l6-l10);
+                trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a (l6-l10);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4969,20 +4969,20 @@ output <- mplusModeler(Model, modelout="trans_conf_inv_edu.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL LOW:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -4990,20 +4990,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL HIGH:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i6-i10);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i6-i10);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i6-i10);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i6-i10);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i6-i10);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i6-i10);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i6-i10);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i6-i10);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i6-i10);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i6-i10);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i6-i10);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -5026,20 +5026,20 @@ output <- mplusModeler(Model, modelout="trans_weak_inv_edu.inp", run=1, check=F)
 MODEL <- paste0(meas,"
                 MODEL LOW:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
@@ -5047,20 +5047,20 @@ MODEL <- paste0(meas,"
                 
                 MODEL HIGH:
                 !Setting Loadings
-            trans2 BY bdze011a bdze015a bdze019a bdze023a bdze026a  (l1-l5);
-            trans4 BY cdze011a cdze015a cdze019a cdze023a cdze026a  (l1-l5);
-            trans6 BY ddze011a ddze015a ddze019a ddze023a ddze026a  (l1-l5);
-            trans8 BY edze011a edze015a edze019a edze023a edze026a  (l1-l5);
-            trans10 BY fdze011a fdze015a fdze019a fdze023a fdze026a  (l1-l5);
-            trans12 BY gdze011a gdze015a gdze019a gdze023a gdze026a  (l1-l5);
+            trans2 BY bdze015a bdze011a bdze019a bdze023a bdze026a  (l1-l5);
+            trans4 BY cdze015a cdze011a cdze019a cdze023a cdze026a  (l1-l5);
+            trans6 BY ddze015a ddze011a ddze019a ddze023a ddze026a  (l1-l5);
+            trans8 BY edze015a edze011a edze019a edze023a edze026a  (l1-l5);
+            trans10 BY fdze015a fdze011a fdze019a fdze023a fdze026a  (l1-l5);
+            trans12 BY gdze015a gdze011a gdze019a gdze023a gdze026a  (l1-l5);
                 
                 !Setting Item Intercepts
-                [bdze011a@0 bdze015a bdze019a bdze023a bdze026a] (i1-i5);
-                [cdze011a@0 cdze015a cdze019a cdze023a cdze026a] (i1-i5);
-                [ddze011a@0 ddze015a ddze019a ddze023a ddze026a] (i1-i5);
-                [edze011a@0 edze015a edze019a edze023a edze026a] (i1-i5);
-                [fdze011a@0 fdze015a fdze019a fdze023a fdze026a] (i1-i5);
-                [gdze011a@0 gdze015a gdze019a gdze023a gdze026a] (i1-i5);
+                [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
+                [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+                [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+                [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+                [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+                [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                 
                 !freely estimate occasion-specific grand means 
                 [trans2 trans4 trans6 trans8 trans10 trans12];
