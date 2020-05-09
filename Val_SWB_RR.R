@@ -2373,6 +2373,319 @@ for (val in 1:4){  # val = indices for value
     
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
                 
+!freely estimate occasion-specific grand means
+[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+[SWB1*4.551 SWB3*4.532 SWB5*4.476 SWB7*4.513 SWB9*4.521 SWB11*4.530];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+                SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val*.430;
+                eta_swb*.486;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                ! Mplus does allow correlations among these exogeneous variables otherwise
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residual variances, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2*.060 (r1a);
+                L_val4*.050 (r1);
+                L_val6 (r1);
+                L_val8 (r1);
+                L_val10 (r1);
+                L_val12 (r1);
+                L_swb1*.340 (r2a);
+                L_swb3*.319 (r2b);
+                L_swb5*.256 (r2);
+                L_swb7 (r2);
+                L_swb9 (r2);
+                L_swb11 (r2);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10*.400 (ar1);
+                L_val10 on L_val8 (ar1);
+                L_val8 on L_val6 (ar1);
+                L_val6 on L_val4 (ar1);
+                L_val4 on L_val2 (ar1);
+                
+                L_swb11 on L_swb9*.191 (ar2);
+                L_swb9 on L_swb7 (ar2);
+                L_swb7 on L_swb5 (ar2);
+                L_swb5 on L_swb3 (ar2);
+                L_swb3 on L_swb1 (ar2a);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11*.000 (cl1);
+                L_val10 on L_swb9 (cl1);
+                L_val8  on L_swb7 (cl1);
+                L_val6  on L_swb5 (cl1);
+                L_val4  on L_swb3 (cl1);
+                L_val2  on L_swb1 (cl1a);
+                
+                L_swb11 on L_val10*.000 (cl2);
+                L_swb9 on L_val8 (cl2);
+                L_swb7 on L_val6 (cl2);
+                L_swb5 on L_val4 (cl2);
+                L_swb3 on L_val2 (cl2a);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9*.000 (cl3);
+                L_val10 on L_swb7 (cl3);
+                L_val8  on L_swb5 (cl3);
+                L_val6  on L_swb3 (cl3);
+                L_val4  on L_swb1 (cl3);
+                
+                L_swb11 on L_val8*.000 (cl4);
+                L_swb9 on L_val6 (cl4);
+                L_swb7 on L_val4 (cl4);
+                L_swb5 on L_val2 (cl4);
+                
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_v var_s V2_on_S1 S2_on_V1 dom_6m
+                V4_on_S1 S4_on_V1 dom_18m);
+
+                ! first, we need the var to standardize the coefficients
+                var_v = ar1**2*var_v + cl1**2*var_s + cl3**2*var_s + r1;
+                var_s = ar2**2*var_s + cl2**2*var_v + cl4**2*var_v + r2;
+
+                ! then, we standardize the coefficients
+                V2_on_S1 = cl1*sqrt(var_s)/sqrt(var_v);
+                V4_on_S1 = cl3*sqrt(var_s)/sqrt(var_v);
+                S2_on_V1 = cl2*sqrt(var_v)/sqrt(var_s);
+                S4_on_V1 = cl4*sqrt(var_v)/sqrt(var_s);
+                
+                ! then, we test the dif bw standardized coef
+                dom_6m = V2_on_S1 - S2_on_V1;
+                dom_18m = V4_on_S1 - S4_on_V1;
+                ")
+    
+    Model <- mplusObject(
+      VARIABLE=ITEMS,
+      usevariables = names(data_ips),
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
+      MODEL=MODEL,rdata=data_ips,autov=T,
+      OUTPUT="STDYX CINTERVAL;")
+    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
+  }
+}
+
+# model and starting values that converge for self-enhancement values and cognitive SWB
+
+ITEMS <- paste0(items_val[[3]], items_swb[[1]])
+
+MODEL <- paste0(meas_val[[3]], meas_swb[[1]], "
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+                SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val*.279;
+                eta_swb*.486;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                ! Mplus does allow correlations among these exogeneous variables otherwise
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residual variances, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2*.051 (r1a);
+                L_val4*.066 (r1);
+                L_val6 (r1);
+                L_val8 (r1);
+                L_val10 (r1);
+                L_val12 (r1);
+                L_swb1*.340 (r2a);
+                L_swb3*.319 (r2b);
+                L_swb5*.256 (r2);
+                L_swb7 (r2);
+                L_swb9 (r2);
+                L_swb11 (r2);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10*.706 (ar1);
+                L_val10 on L_val8 (ar1);
+                L_val8 on L_val6 (ar1);
+                L_val6 on L_val4 (ar1);
+                L_val4 on L_val2 (ar1);
+                
+                L_swb11 on L_swb9*.191 (ar2);
+                L_swb9 on L_swb7 (ar2);
+                L_swb7 on L_swb5 (ar2);
+                L_swb5 on L_swb3 (ar2);
+                L_swb3 on L_swb1 (ar2a);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11*-.068 (cl1);
+                L_val10 on L_swb9 (cl1);
+                L_val8  on L_swb7 (cl1);
+                L_val6  on L_swb5 (cl1);
+                L_val4  on L_swb3 (cl1);
+                L_val2  on L_swb1 (cl1a);
+                
+                L_swb11 on L_val10*-.086 (cl2);
+                L_swb9 on L_val8 (cl2);
+                L_swb7 on L_val6 (cl2);
+                L_swb5 on L_val4 (cl2);
+                L_swb3 on L_val2 (cl2a);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9*.000 (cl3);
+                L_val10 on L_swb7 (cl3);
+                L_val8  on L_swb5 (cl3);
+                L_val6  on L_swb3 (cl3);
+                L_val4  on L_swb1 (cl3);
+                
+                L_swb11 on L_val8*.000 (cl4);
+                L_swb9 on L_val6 (cl4);
+                L_swb7 on L_val4 (cl4);
+                L_swb5 on L_val2 (cl4);
+                
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_v var_s V2_on_S1 S2_on_V1 dom_6m
+                V4_on_S1 S4_on_V1 dom_18m);
+
+                ! first, we need the var to standardize the coefficients
+                var_v = ar1**2*var_v + cl1**2*var_s + cl3**2*var_s + r1;
+                var_s = ar2**2*var_s + cl2**2*var_v + cl4**2*var_v + r2;
+
+                ! then, we standardize the coefficients
+                V2_on_S1 = cl1*sqrt(var_s)/sqrt(var_v);
+                V4_on_S1 = cl3*sqrt(var_s)/sqrt(var_v);
+                S2_on_V1 = cl2*sqrt(var_v)/sqrt(var_s);
+                S4_on_V1 = cl4*sqrt(var_v)/sqrt(var_s);
+                
+                ! then, we test the dif bw standardized coef
+                dom_6m = V2_on_S1 - S2_on_V1;
+                dom_18m = V4_on_S1 - S4_on_V1;
+                ")
+
+Model <- mplusObject(
+  VARIABLE=ITEMS,
+  usevariables = names(data_ips),
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
+  MODEL=MODEL,rdata=data_ips,autov=T,
+  OUTPUT="STDYX CINTERVAL;")
+output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[3]][1], ".inp"), run=1, check=F)
+
+
+# model and starting values that converge for self-enhancement values and affective SWB
+
+ITEMS <- paste0(items_val[[4]], items_swb[[2]])
+
+MODEL <- paste0(meas_val[[4]], meas_swb[[2]], "
+                
                 !freely estimate occasion-specific grand means
                 [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
                 [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
@@ -2469,27 +2782,27 @@ for (val in 1:4){  # val = indices for value
                 L_swb3 on L_swb1 (ar2a);
                 
                 !Constrained crosslags (6 months);
-                L_val12 on L_swb11 (cl1);
+                L_val12 on L_swb11*-.068 (cl1);
                 L_val10 on L_swb9 (cl1);
                 L_val8  on L_swb7 (cl1);
                 L_val6  on L_swb5 (cl1);
                 L_val4  on L_swb3 (cl1);
                 L_val2  on L_swb1 (cl1a);
                 
-                L_swb11 on L_val10 (cl2);
+                L_swb11 on L_val10*-.086 (cl2);
                 L_swb9 on L_val8 (cl2);
                 L_swb7 on L_val6 (cl2);
                 L_swb5 on L_val4 (cl2);
                 L_swb3 on L_val2 (cl2a);
                 
                 !Constrained crosslags (18 months);
-                L_val12 on L_swb9 (cl3);
+                L_val12 on L_swb9*.000 (cl3);
                 L_val10 on L_swb7 (cl3);
                 L_val8  on L_swb5 (cl3);
                 L_val6  on L_swb3 (cl3);
                 L_val4  on L_swb1 (cl3);
                 
-                L_swb11 on L_val8 (cl4);
+                L_swb11 on L_val8*.000 (cl4);
                 L_swb9 on L_val6 (cl4);
                 L_swb7 on L_val4 (cl4);
                 L_swb5 on L_val2 (cl4);
@@ -2513,16 +2826,327 @@ for (val in 1:4){  # val = indices for value
                 dom_6m = V2_on_S1 - S2_on_V1;
                 dom_18m = V4_on_S1 - S4_on_V1;
                 ")
-    
-    Model <- mplusObject(
-      VARIABLE=ITEMS,
-      usevariables = names(data_ips),
-      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
-      MODEL=MODEL,rdata=data_ips,autov=T,
-      OUTPUT="STDYX CINTERVAL;")
-    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
-  }
-}
+
+Model <- mplusObject(
+  VARIABLE=ITEMS,
+  usevariables = names(data_ips),
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
+  MODEL=MODEL,rdata=data_ips,autov=T,
+  OUTPUT="STDYX CINTERVAL;")
+output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[4]][2], ".inp"), run=1, check=F)
+
+
+# model and starting values that converge for self-enhancement values and cognitive SWB
+
+ITEMS <- paste0(items_val[[4]], items_swb[[1]])
+
+MODEL <- paste0(meas_val[[4]], meas_swb[[1]], "
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+                SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val*.430;
+                eta_swb*.486;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                ! Mplus does allow correlations among these exogeneous variables otherwise
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residual variances, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2*.051 (r1a);
+                L_val4*.066 (r1);
+                L_val6 (r1);
+                L_val8 (r1);
+                L_val10 (r1);
+                L_val12 (r1);
+                L_swb1*.340 (r2a);
+                L_swb3*.319 (r2b);
+                L_swb5*.256 (r2);
+                L_swb7 (r2);
+                L_swb9 (r2);
+                L_swb11 (r2);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10*.706 (ar1);
+                L_val10 on L_val8 (ar1);
+                L_val8 on L_val6 (ar1);
+                L_val6 on L_val4 (ar1);
+                L_val4 on L_val2 (ar1);
+                
+                L_swb11 on L_swb9*.191 (ar2);
+                L_swb9 on L_swb7 (ar2);
+                L_swb7 on L_swb5 (ar2);
+                L_swb5 on L_swb3 (ar2);
+                L_swb3 on L_swb1 (ar2a);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11*-.068 (cl1);
+                L_val10 on L_swb9 (cl1);
+                L_val8  on L_swb7 (cl1);
+                L_val6  on L_swb5 (cl1);
+                L_val4  on L_swb3 (cl1);
+                L_val2  on L_swb1 (cl1a);
+                
+                L_swb11 on L_val10*-.086 (cl2);
+                L_swb9 on L_val8 (cl2);
+                L_swb7 on L_val6 (cl2);
+                L_swb5 on L_val4 (cl2);
+                L_swb3 on L_val2 (cl2a);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9*.000 (cl3);
+                L_val10 on L_swb7 (cl3);
+                L_val8  on L_swb5 (cl3);
+                L_val6  on L_swb3 (cl3);
+                L_val4  on L_swb1 (cl3);
+                
+                L_swb11 on L_val8*.000 (cl4);
+                L_swb9 on L_val6 (cl4);
+                L_swb7 on L_val4 (cl4);
+                L_swb5 on L_val2 (cl4);
+                
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_v var_s V2_on_S1 S2_on_V1 dom_6m
+                V4_on_S1 S4_on_V1 dom_18m);
+
+                ! first, we need the var to standardize the coefficients
+                var_v = ar1**2*var_v + cl1**2*var_s + cl3**2*var_s + r1;
+                var_s = ar2**2*var_s + cl2**2*var_v + cl4**2*var_v + r2;
+
+                ! then, we standardize the coefficients
+                V2_on_S1 = cl1*sqrt(var_s)/sqrt(var_v);
+                V4_on_S1 = cl3*sqrt(var_s)/sqrt(var_v);
+                S2_on_V1 = cl2*sqrt(var_v)/sqrt(var_s);
+                S4_on_V1 = cl4*sqrt(var_v)/sqrt(var_s);
+                
+                ! then, we test the dif bw standardized coef
+                dom_6m = V2_on_S1 - S2_on_V1;
+                dom_18m = V4_on_S1 - S4_on_V1;
+                ")
+
+Model <- mplusObject(
+  VARIABLE=ITEMS,
+  usevariables = names(data_ips),
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
+  MODEL=MODEL,rdata=data_ips,autov=T,
+  OUTPUT="STDYX CINTERVAL;")
+output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[4]][1], ".inp"), run=1, check=F)
+
+
+# model and starting values that converge for self-enhancement values and affective SWB
+
+ITEMS <- paste0(items_val[[4]], items_swb[[2]])
+
+MODEL <- paste0(meas_val[[4]], meas_swb[[2]], "
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+                SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val*.412;
+                eta_swb*.668;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                ! Mplus does allow correlations among these exogeneous variables otherwise
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residual variances, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2*.048 (r1a);
+                L_val4*.063 (r1);
+                L_val6 (r1);
+                L_val8 (r1);
+                L_val10 (r1);
+                L_val12 (r1);
+                L_swb1*.505 (r2a);
+                L_swb3*.400 (r2b);
+                L_swb5*.302 (r2);
+                L_swb7 (r2);
+                L_swb9 (r2);
+                L_swb11 (r2);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10 (ar1);
+                L_val10 on L_val8 (ar1);
+                L_val8 on L_val6 (ar1);
+                L_val6 on L_val4 (ar1);
+                L_val4 on L_val2 (ar1);
+                
+                L_swb11 on L_swb9 (ar2);
+                L_swb9 on L_swb7 (ar2);
+                L_swb7 on L_swb5 (ar2);
+                L_swb5 on L_swb3 (ar2);
+                L_swb3 on L_swb1 (ar2a);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11*-.068 (cl1);
+                L_val10 on L_swb9 (cl1);
+                L_val8  on L_swb7 (cl1);
+                L_val6  on L_swb5 (cl1);
+                L_val4  on L_swb3 (cl1);
+                L_val2  on L_swb1 (cl1a);
+                
+                L_swb11 on L_val10*-.086 (cl2);
+                L_swb9 on L_val8 (cl2);
+                L_swb7 on L_val6 (cl2);
+                L_swb5 on L_val4 (cl2);
+                L_swb3 on L_val2 (cl2a);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9*.000 (cl3);
+                L_val10 on L_swb7 (cl3);
+                L_val8  on L_swb5 (cl3);
+                L_val6  on L_swb3 (cl3);
+                L_val4  on L_swb1 (cl3);
+                
+                L_swb11 on L_val8*.000 (cl4);
+                L_swb9 on L_val6 (cl4);
+                L_swb7 on L_val4 (cl4);
+                L_swb5 on L_val2 (cl4);
+                
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_v var_s V2_on_S1 S2_on_V1 dom_6m
+                V4_on_S1 S4_on_V1 dom_18m);
+
+                ! first, we need the var to standardize the coefficients
+                var_v = ar1**2*var_v + cl1**2*var_s + cl3**2*var_s + r1;
+                var_s = ar2**2*var_s + cl2**2*var_v + cl4**2*var_v + r2;
+
+                ! then, we standardize the coefficients
+                V2_on_S1 = cl1*sqrt(var_s)/sqrt(var_v);
+                V4_on_S1 = cl3*sqrt(var_s)/sqrt(var_v);
+                S2_on_V1 = cl2*sqrt(var_v)/sqrt(var_s);
+                S4_on_V1 = cl4*sqrt(var_v)/sqrt(var_s);
+                
+                ! then, we test the dif bw standardized coef
+                dom_6m = V2_on_S1 - S2_on_V1;
+                dom_18m = V4_on_S1 - S4_on_V1;
+                ")
+
+Model <- mplusObject(
+  VARIABLE=ITEMS,
+  usevariables = names(data_ips),
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; iterations=10000;",
+  MODEL=MODEL,rdata=data_ips,autov=T,
+  OUTPUT="STDYX CINTERVAL;")
+output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[4]][2], ".inp"), run=1, check=F)
+
 
 
 ## checking model fits and whether there were warnings 
