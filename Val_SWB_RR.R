@@ -7887,6 +7887,9 @@ grouping is age_c (1=YOUNG 2=MIDDLE 3=OLD);"
 
 for (val in 1:4){  # val = indices for value
   for (swb in 1:2){ # swb = indices for subject well-being
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
                                
                 !freely estimate occasion-specific grand means
@@ -8469,6 +8472,9 @@ grouping is gender (1=MALE 2=FEMALE);"
 
 for (val in 1:4){  # val = indices for value
   for (swb in 1:2){ # swb = indices for subject well-being
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
                                
                 !freely estimate occasion-specific grand means
@@ -8910,6 +8916,9 @@ grouping is edu_d (0=LOW 1=HIGH);"
 
 for (val in 1:4){  # val = indices for value
   for (swb in 1:2){ # swb = indices for subject well-being
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
                                
                 !freely estimate occasion-specific grand means
