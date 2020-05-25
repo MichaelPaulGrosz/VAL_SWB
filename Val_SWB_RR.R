@@ -319,7 +319,8 @@ cdze013a cdze018a cdze020a cdze024a cdze027a
 ddze013a ddze018a ddze020a ddze024a ddze027a
 edze013a edze018a edze020a edze024a edze027a
 fdze013a fdze018a fdze020a fdze024a fdze027a
-gdze013a gdze018a gdze020a gdze024a gdze027a;"
+gdze013a gdze018a gdze020a gdze024a gdze027a;
+AUXILIARY = (M) gender age edu_d;"
 
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
@@ -555,7 +556,8 @@ cdze014a cdze017a cdze022a
 ddze014a ddze017a ddze022a
 edze014a edze017a edze022a
 fdze014a fdze017a fdze022a
-gdze014a gdze017a gdze022a;"
+gdze014a gdze017a gdze022a;
+AUXILIARY = (M) gender age edu_d;"
 
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
@@ -988,7 +990,8 @@ cdze012a cdze016a cdze021a cdze025a
 ddze012a ddze016a ddze021a ddze025a
 edze012a edze016a edze021a edze025a
 fdze012a fdze016a fdze021a fdze025a
-gdze012a gdze016a gdze021a gdze025a;"
+gdze012a gdze016a gdze021a gdze025a;
+AUXILIARY = (M) gender age edu_d;"
 
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
@@ -1205,7 +1208,8 @@ cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a
 dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a
 eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a
 fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a
-gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;"
+gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;
+AUXILIARY = (M) gender age edu_d;"
 
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
@@ -1475,7 +1479,8 @@ cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a
 eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a
 fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a
-gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;"
+gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
+AUXILIARY = (M) gender age edu_d;"
 
 ## 1. latent state model: configural invariance (loadings and intercept are NOT equal across measurement time)
 
@@ -6908,7 +6913,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l15-l2
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_conf_inv_age.inp", run=1, check=F)
@@ -6983,7 +6988,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_weak_inv_age.inp", run=1, check=F)
@@ -7058,7 +7063,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_strong_inv_age.inp", run=1, check=F)
@@ -7141,7 +7146,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_conf_inv_sex.inp", run=1, check=F)
@@ -7195,7 +7200,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_weak_inv_sex.inp", run=1, check=F)
@@ -7250,7 +7255,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_strong_inv_sex.inp", run=1, check=F)
@@ -7333,7 +7338,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l8-l14
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_conf_inv_edu.inp", run=1, check=F)
@@ -7387,7 +7392,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_weak_inv_edu.inp", run=1, check=F)
@@ -7442,7 +7447,7 @@ cogn11 BY gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a (l1-l7)
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cogn_strong_inv_edu.inp", run=1, check=F)
@@ -7561,7 +7566,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7581,7 +7587,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l9-l12);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l13-l16);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -7601,7 +7608,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l17-l24);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l17-l24);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l17-l24);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l17-l24);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l17-l20);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l21-l24);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
@@ -7618,7 +7626,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_conf_inv_age.inp", run=1, check=F)
@@ -7635,7 +7643,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7655,7 +7664,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -7675,7 +7685,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i17-i24);
@@ -7693,7 +7704,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_weak_inv_age.inp", run=1, check=F)
@@ -7710,7 +7721,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7730,7 +7742,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7750,7 +7763,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7768,7 +7782,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_strong_inv_age.inp", run=1, check=F)
@@ -7816,7 +7830,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7836,7 +7851,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l9-l12);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l13-l16);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -7853,7 +7869,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_conf_inv_sex.inp", run=1, check=F)
@@ -7870,7 +7886,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7890,7 +7907,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -7908,7 +7926,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_weak_inv_sex.inp", run=1, check=F)
@@ -7925,7 +7943,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7945,7 +7964,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -7963,7 +7983,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_strong_inv_sex.inp", run=1, check=F)
@@ -8011,7 +8031,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -8031,7 +8052,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l9-l16);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l9-l16);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l9-l16);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l9-l16);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l9-l12);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l13-l16);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -8048,7 +8070,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_conf_inv_edu.inp", run=1, check=F)
@@ -8065,7 +8087,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -8085,7 +8108,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i9-i16);
@@ -8103,7 +8127,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_weak_inv_edu.inp", run=1, check=F)
@@ -8121,7 +8145,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -8141,7 +8166,8 @@ affe3 BY cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 affe5 BY dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a (l1-l8);
 affe7 BY eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a (l1-l8);
 affe9 BY fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a (l1-l8);
-affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a (l1-l8);
+affe11 BY gazb021a gazb022a gazb023a gazb024a (l1-l4);
+affe11 BY gazb025a gazb026a gazb027a gazb028a (l5-l8);
 
 !Setting Item Intercepts
 [bazb019a@0 bazb020a bazb021a bazb022a bazb023a bazb024a bazb025a bazb026a] (i1-i8);
@@ -8159,7 +8185,7 @@ affe11 BY gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="affe_strong_inv_edu.inp", run=1, check=F)
@@ -9333,8 +9359,7 @@ cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a
 dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a
 eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a
 fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a
-gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a
-age_c;
+gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;
 AUXILIARY = (M) age edu_d;
 grouping is gender (1=MALE 2=FEMALE);"
 
@@ -9344,14 +9369,15 @@ cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a
 eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a
 fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a
-gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a
-age_c;
+gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
 AUXILIARY = (M) age edu_d;
 grouping is gender (1=MALE 2=FEMALE);"
 
 
+### loop for cognitive SWB (with starting values for cog SWB)
+
 for (val in 1:4){  # val = indices for value
-  for (swb in 1:2){ # swb = indices for subject well-being
+  for (swb in 1:1){ # swb = indices for subject well-being
     
     ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
     
@@ -9613,7 +9639,7 @@ eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
 
 !Estimate variances of random intercept;
 eta_val;
-eta_swb;
+eta_swb*.692;
 
 ! allowing for covariances among random intercepts
 eta_val with eta_swb;
@@ -9763,6 +9789,419 @@ mod18_MF = dom_18mM - dom_18mF;
 }
 
 
+### loop for affective SWB (with starting values for aff SWB)
+
+for (val in 1:4){  # val = indices for value
+  for (swb in 2:2){ # swb = indices for subject well-being
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
+    MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
+                               
+!freely estimate occasion-specific grand means
+[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+!factor variances are all free
+VAL2 VAL4 VAL6 VAL8 VAL10;
+SWB1 SWB3 SWB5 SWB7 SWB9;
+
+! BETWEEN-PERSON LEVEL
+
+!Random intercepts
+eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+!Constrain means of random intercepts
+[eta_val@0];
+[eta_swb@0];
+
+!Estimate variances of random intercept;
+eta_val;
+eta_swb;
+
+! allowing for covariances among random intercepts
+eta_val with eta_swb;
+
+!constraining covariance among random intercepts and first residuals
+! Mplus does allow correlations among these exogeneous variables otherwise
+eta_val with L_val2@0 L_swb1@0;
+eta_swb with L_val2@0 L_swb1@0;
+
+! WITHIN-PERSON LEVEL
+
+!Constrain observed residual variances, to identify structured residuals;
+VAL2@0;
+VAL4@0;
+VAL6@0;
+VAL8@0;
+VAL10@0;
+VAL12@0;
+SWB1@0;
+SWB3@0;
+SWB5@0;
+SWB7@0;
+SWB9@0;
+SWB11@0;
+
+!Estimate structured residuals
+L_val2 by VAL2@1;
+L_val4 by VAL4@1;
+L_val6 by VAL6@1;
+L_val8 by VAL8@1;
+L_val10 by VAL10@1;
+L_val12 by VAL12@1;
+
+L_swb1 by SWB1@1;
+L_swb3 by SWB3@1;
+L_swb5 by SWB5@1;
+L_swb7 by SWB7@1;
+L_swb9 by SWB9@1;
+L_swb11 by SWB11@1;
+
+!Constrain means/intercepts of residuals
+[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+!Set equal the variances of the 'residuals of the residuals'
+!Freely estimate t1 structured residual.
+L_val2;
+L_val4;
+L_val6;
+L_val8;
+L_val10;
+L_val12;
+L_swb1;
+L_swb3;
+L_swb5;
+L_swb7;
+L_swb9;
+L_swb11;
+
+!AR amongst SRs;
+L_val12 on L_val10;
+L_val10 on L_val8;
+L_val8 on L_val6;
+L_val6 on L_val4;
+L_val4 on L_val2;
+
+L_swb11 on L_swb9;
+L_swb9 on L_swb7;
+L_swb7 on L_swb5;
+L_swb5 on L_swb3;
+L_swb3 on L_swb1;
+
+!Crosslags (6 months);
+L_val12 on L_swb11;
+L_val10 on L_swb9;
+L_val8  on L_swb7;
+L_val6  on L_swb5;
+L_val4  on L_swb3;
+L_val2  on L_swb1;
+
+L_swb11 on L_val10;
+L_swb9 on L_val8;
+L_swb7 on L_val6;
+L_swb5 on L_val4;
+L_swb3 on L_val2;
+
+!Crosslags (18 months);
+L_val12 on L_swb9;
+L_val10 on L_swb7;
+L_val8  on L_swb5;
+L_val6  on L_swb3;
+L_val4  on L_swb1;
+
+L_swb11 on L_val8;
+L_swb9 on L_val6;
+L_swb7 on L_val4;
+L_swb5 on L_val2;
+              
+                
+MODEL MALE:
+
+!freely estimate occasion-specific grand means
+[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+! BETWEEN-PERSON LEVEL
+
+!Random intercepts
+eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+!Constrain means of random intercepts
+[eta_val@0];
+[eta_swb@0];
+
+!Estimate variances of random intercept;
+eta_val;
+eta_swb*.485;
+
+! allowing for covariances among random intercepts
+eta_val with eta_swb;
+
+!constraining covariance among random intercepts and first residuals
+! Mplus does allow correlations among these exogeneous variables otherwise
+eta_val with L_val2@0 L_swb1@0;
+eta_swb with L_val2@0 L_swb1@0;
+
+! WITHIN-PERSON LEVEL
+
+!Constrain observed residual variances, to identify structured residuals;
+VAL2@0;
+VAL4@0;
+VAL6@0;
+VAL8@0;
+VAL10@0;
+VAL12@0;
+SWB1@0;
+SWB3@0;
+SWB5@0;
+SWB7@0;
+SWB9@0;
+SWB11@0;
+
+!Estimate structured residuals
+L_val2 by VAL2@1;
+L_val4 by VAL4@1;
+L_val6 by VAL6@1;
+L_val8 by VAL8@1;
+L_val10 by VAL10@1;
+L_val12 by VAL12@1;
+
+L_swb1 by SWB1@1;
+L_swb3 by SWB3@1;
+L_swb5 by SWB5@1;
+L_swb7 by SWB7@1;
+L_swb9 by SWB9@1;
+L_swb11 by SWB11@1;
+
+!Constrain means/intercepts of residuals
+[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+!Set equal the variances of the 'residuals of the residuals'
+!Freely estimate t1 structured residual.
+L_val2 (r1Ma);
+L_val4 (r1M);
+L_val6 (r1M);
+L_val8 (r1M);
+L_val10 (r1M);
+L_val12 (r1M);
+L_swb1*.317 (r2Ma);
+L_swb3*.267 (r2Mb);
+L_swb5*.231 (r2M);
+L_swb7 (r2M);
+L_swb9 (r2M);
+L_swb11 (r2M);
+
+!AR amongst SRs with assumed stationarity;
+L_val12 on L_val10 (ar1M);
+L_val10 on L_val8 (ar1M);
+L_val8 on L_val6 (ar1M);
+L_val6 on L_val4 (ar1M);
+L_val4 on L_val2 (ar1M);
+
+L_swb11 on L_swb9*.202 (ar2M);
+L_swb9 on L_swb7 (ar2M);
+L_swb7 on L_swb5 (ar2M);
+L_swb5 on L_swb3 (ar2M);
+L_swb3 on L_swb1 (ar2Ma);
+
+!Constrained crosslags (6 months);
+L_val12 on L_swb11 (cl1M);
+L_val10 on L_swb9 (cl1M);
+L_val8  on L_swb7 (cl1M);
+L_val6  on L_swb5 (cl1M);
+L_val4  on L_swb3 (cl1M);
+L_val2  on L_swb1 (cl1Ma);
+
+L_swb11 on L_val10 (cl2M);
+L_swb9 on L_val8 (cl2M);
+L_swb7 on L_val6 (cl2M);
+L_swb5 on L_val4 (cl2M);
+L_swb3 on L_val2 (cl2Ma);
+
+!Constrained crosslags (18 months);
+L_val12 on L_swb9 (cl3M);
+L_val10 on L_swb7 (cl3M);
+L_val8  on L_swb5 (cl3M);
+L_val6  on L_swb3 (cl3M);
+L_val4  on L_swb1 (cl3M);
+
+L_swb11 on L_val8 (cl4M);
+L_swb9 on L_val6 (cl4M);
+L_swb7 on L_val4 (cl4M);
+L_swb5 on L_val2 (cl4M);
+              
+              
+MODEL FEMALE:
+
+!freely estimate occasion-specific grand means
+[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+! BETWEEN-PERSON LEVEL
+
+!Random intercepts
+eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+!Constrain means of random intercepts
+[eta_val@0];
+[eta_swb@0];
+
+!Estimate variances of random intercept;
+eta_val;
+eta_swb*.489;
+
+! allowing for covariances among random intercepts
+eta_val with eta_swb;
+
+!constraining covariance among random intercepts and first residuals
+! Mplus does allow correlations among these exogeneous variables otherwise
+eta_val with L_val2@0;
+eta_val with L_swb1@0;
+eta_swb with L_val2@0;
+eta_swb with L_swb1@0;
+
+! WITHIN-PERSON LEVEL
+
+!Constrain observed residual variances, to identify structured residuals;
+VAL2@0;
+VAL4@0;
+VAL6@0;
+VAL8@0;
+VAL10@0;
+VAL12@0;
+SWB1@0;
+SWB3@0;
+SWB5@0;
+SWB7@0;
+SWB9@0;
+SWB11@0;
+
+!Estimate structured residuals
+L_val2 by VAL2@1;
+L_val4 by VAL4@1;
+L_val6 by VAL6@1;
+L_val8 by VAL8@1;
+L_val10 by VAL10@1;
+L_val12 by VAL12@1;
+
+L_swb1 by SWB1@1;
+L_swb3 by SWB3@1;
+L_swb5 by SWB5@1;
+L_swb7 by SWB7@1;
+L_swb9 by SWB9@1;
+L_swb11 by SWB11@1;
+
+!Constrain means/intercepts of residuals
+[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+!Set equal the variances of the 'residuals of the residuals'
+!Freely estimate t1 structured residual.
+L_val2 (r1Fa);
+L_val4 (r1F);
+L_val6 (r1F);
+L_val8 (r1F);
+L_val10 (r1F);
+L_val12 (r1F);
+L_swb1*.366 (r2Fa);
+L_swb3*.371 (r2Fb);
+L_swb5*.285 (r2F);
+L_swb7 (r2F);
+L_swb9 (r2F);
+L_swb11 (r2F);
+
+!AR amongst SRs with assumed stationarity;
+L_val12 on L_val10 (ar1F);
+L_val10 on L_val8 (ar1F);
+L_val8 on L_val6 (ar1F);
+L_val6 on L_val4 (ar1F);
+L_val4 on L_val2 (ar1F);
+
+L_swb11 on L_swb9*.180 (ar2F);
+L_swb9 on L_swb7 (ar2F);
+L_swb7 on L_swb5 (ar2F);
+L_swb5 on L_swb3 (ar2F);
+L_swb3 on L_swb1 (ar2Fa);
+
+!Constrained crosslags (6 months);
+L_val12 on L_swb11 (cl1F);
+L_val10 on L_swb9 (cl1F);
+L_val8  on L_swb7 (cl1F);
+L_val6  on L_swb5 (cl1F);
+L_val4  on L_swb3 (cl1F);
+L_val2  on L_swb1 (cl1Fa);
+
+L_swb11 on L_val10 (cl2F);
+L_swb9 on L_val8 (cl2F);
+L_swb7 on L_val6 (cl2F);
+L_swb5 on L_val4 (cl2F);
+L_swb3 on L_val2 (cl2Fa);
+
+!Constrained crosslags (18 months);
+L_val12 on L_swb9 (cl3F);
+L_val10 on L_swb7 (cl3F);
+L_val8  on L_swb5 (cl3F);
+L_val6  on L_swb3 (cl3F);
+L_val4  on L_swb1 (cl3F);
+
+L_swb11 on L_val8 (cl4F);
+L_swb9 on L_val6 (cl4F);
+L_swb7 on L_val4 (cl4F);
+L_swb5 on L_val2 (cl4F);
+ 
+                
+!testing causal dominance
+Model Constraints: 
+NEW (var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
+V4_o_S1M S4_o_V1M dom_18mM
+var_vF var_sF V2_o_S1F S2_o_V1F dom_6mF
+V4_o_S1F S4_o_V1F dom_18mF
+mod6_MF mod18_MF);
+
+! MALE
+var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
+var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
+
+V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
+S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
+V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
+S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
+
+dom_6mM = V2_o_S1M - S2_o_V1M;
+dom_18mM = V4_o_S1M - S4_o_V1M;
+
+! FEMALE
+var_vF = ar1F**2*var_vF + cl1F**2*var_sF + cl3F**2*var_sF + r1F;
+var_sF = ar2F**2*var_sF + cl2F**2*var_vF + cl4F**2*var_vF + r2F;
+
+V2_o_S1F = cl1F*sqrt(var_sF)/sqrt(var_vF);
+S2_o_V1F = cl2F*sqrt(var_vF)/sqrt(var_sF);
+V4_o_S1F = cl3F*sqrt(var_sF)/sqrt(var_vF);
+S4_o_V1F = cl4F*sqrt(var_vF)/sqrt(var_sF);
+
+dom_6mF = V2_o_S1F - S2_o_V1F;
+dom_18mF = V4_o_S1F - S4_o_V1F;
+
+! testing moderation effects of gender
+mod6_MF = dom_6mM - dom_6mF;
+mod18_MF = dom_18mM - dom_18mF;
+                ")
+    
+    Model <- mplusObject(
+      VARIABLE=ITEMS,
+      usevariables = names(data),
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS =10000;",
+      MODEL=MODEL,rdata=data,autov=T,
+      OUTPUT="STDYX CINTERVAL;")
+    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
+  }
+}
 
 ### 6.2.3 Education (Robustness Check) ####
 
@@ -9779,8 +10218,7 @@ cazb005a cazb014a cazb015a cazb016a cazb017a cazb018a cazb019a
 dazb005a dazb014a dazb015a dazb016a dazb017a dazb018a dazb019a
 eazb005a eazb014a eazb015a eazb016a eazb017a eazb018a eazb019a
 fazb005a fazb014a fazb015a fazb016a fazb017a fazb018a fazb019a
-gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a
-age_c;
+gazb005a gazb014a gazb015a gazb016a gazb017a gazb018a gazb019a;
 AUXILIARY = (M) age gender;
 grouping is edu_d (0=LOW 1=HIGH);"
 
@@ -9790,8 +10228,7 @@ cazb021a cazb022a cazb023a cazb024a cazb025a cazb026a cazb027a cazb028a
 dazb021a dazb022a dazb023a dazb024a dazb025a dazb026a dazb027a dazb028a
 eazb021a eazb022a eazb023a eazb024a eazb025a eazb026a eazb027a eazb028a
 fazb021a fazb022a fazb023a fazb024a fazb025a fazb026a fazb027a fazb028a
-gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a
-age_c;
+gazb021a gazb022a gazb023a gazb024a gazb025a gazb026a gazb027a gazb028a;
 AUXILIARY = (M) age gender;
 grouping is edu_d (0=LOW 1=HIGH);"
 
