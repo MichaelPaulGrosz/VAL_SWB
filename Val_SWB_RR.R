@@ -935,11 +935,11 @@ meas <- c("
             
             !Setting Item Intercepts NOT Equal Across Time
             [bdze015a@0 bdze011a bdze019a bdze023a bdze026a] (i1-i5);
-            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i6-i10);
-            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i11-i15);
-            [edze015a@0 edze011a edze019a edze023a edze026a] (i16-i20);
-            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i21-i25);
-            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i26-i30);
+            [cdze015a@0 cdze011a cdze019a cdze023a cdze026a] (i1-i5);
+            [ddze015a@0 ddze011a ddze019a ddze023a ddze026a] (i1-i5);
+            [edze015a@0 edze011a edze019a edze023a edze026a] (i1-i5);
+            [fdze015a@0 fdze011a fdze019a fdze023a fdze026a] (i1-i5);
+            [gdze015a@0 gdze011a gdze019a gdze023a gdze026a] (i1-i5);
                  
                  ")
 
