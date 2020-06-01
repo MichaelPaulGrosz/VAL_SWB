@@ -4209,7 +4209,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_strong_inv_age.inp", run=1, check=F)
@@ -4297,7 +4297,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_conf_inv_sex.inp", run=1, check=F)
@@ -4352,7 +4352,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_weak_inv_sex.inp", run=1, check=F)
@@ -4407,7 +4407,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_strong_inv_sex.inp", run=1, check=F)
@@ -4495,7 +4495,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_conf_inv_edu.inp", run=1, check=F)
@@ -4549,7 +4549,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_weak_inv_edu.inp", run=1, check=F)
@@ -4604,7 +4604,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="open_strong_inv_edu.inp", run=1, check=F)
@@ -4758,7 +4758,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_conf_inv_age.inp", run=1, check=F)
@@ -4835,7 +4835,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_weak_inv_age.inp", run=1, check=F)
@@ -4912,7 +4912,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_strong_inv_age.inp", run=1, check=F)
@@ -4998,7 +4998,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_conf_inv_sex.inp", run=1, check=F)
@@ -5054,7 +5054,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_weak_inv_sex.inp", run=1, check=F)
@@ -5110,7 +5110,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_strong_inv_sex.inp", run=1, check=F)
@@ -5197,7 +5197,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_conf_inv_edu.inp", run=1, check=F)
@@ -5253,7 +5253,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_weak_inv_edu.inp", run=1, check=F)
@@ -5309,7 +5309,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="cons_strong_inv_edu.inp", run=1, check=F)
@@ -5476,7 +5476,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_conf_inv_age.inp", run=1, check=F)
@@ -5553,7 +5553,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_weak_inv_age.inp", run=1, check=F)
@@ -5630,7 +5630,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_strong_inv_age.inp", run=1, check=F)
@@ -5716,7 +5716,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_conf_inv_sex.inp", run=1, check=F)
@@ -5772,7 +5772,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_weak_inv_sex.inp", run=1, check=F)
@@ -5829,7 +5829,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_strong_inv_sex.inp", run=1, check=F)
@@ -5916,7 +5916,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_conf_inv_edu.inp", run=1, check=F)
@@ -5972,7 +5972,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_weak_inv_edu.inp", run=1, check=F)
@@ -6029,7 +6029,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="trans_strong_inv_edu.inp", run=1, check=F)
@@ -6190,7 +6190,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_conf_inv_age.inp", run=1, check=F)
@@ -6266,7 +6266,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_weak_inv_age.inp", run=1, check=F)
@@ -6342,7 +6342,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_strong_inv_age.inp", run=1, check=F)
@@ -6429,7 +6429,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_conf_inv_sex.inp", run=1, check=F)
@@ -6484,7 +6484,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_weak_inv_sex.inp", run=1, check=F)
@@ -6540,7 +6540,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_strong_inv_sex.inp", run=1, check=F)
@@ -6627,7 +6627,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_conf_inv_edu.inp", run=1, check=F)
@@ -6682,7 +6682,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_weak_inv_edu.inp", run=1, check=F)
@@ -6737,7 +6737,7 @@ MODEL <- paste0(meas,"
 Model <- mplusObject(
   VARIABLE=ITEMS,
   usevariables = names(data),
-  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4;",
+  ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS=10000;",
   MODEL=MODEL,rdata=data,autov=T,
   OUTPUT="STDYX;")
 output <- mplusModeler(Model, modelout="enha_strong_inv_edu.inp", run=1, check=F)
@@ -8240,543 +8240,545 @@ age_c;
 AUXILIARY = (M) gender edu_d;
 grouping is age_c (1=YOUNG 2=MIDDLE 3=OLD);"
 
-# loop for COGNITIVE SWB (separate loop for cog and aff SWB because different starting values)
-
-for (val in 2:4){  # val = indices for value
-  for (swb in 1:1){ # swb = indices for subject well-being;
+for (val in 1:4){  # val = indices for value
+  for (swb in 1:2){ # swb = indices for subject well-being;
     
     ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
     
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
                                
-                !freely estimate occasion-specific grand means
-                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-                
-                !factor variances are all free
-                VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
-                SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
-                
-                ! BETWEEN-PERSON LEVEL
-                
-                !Random intercepts
-                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-                
-                !Constrain means of random intercepts
-                [eta_val@0];
-                [eta_swb@0];
-                
-                !Estimate variances of random intercept;
-                eta_val;
-                eta_swb;
-                
-                ! allowing for covariances among random intercepts
-                eta_val with eta_swb;
-                
-                !constraining covariance among random intercepts and first residuals
-                ! Mplus does allow correlations among these exogeneous variables otherwise
-                eta_val with L_val2@0 L_swb1@0;
-                eta_swb with L_val2@0 L_swb1@0;
-                
-                ! WITHIN-PERSON LEVEL
-                
-                !Constrain observed residual variances, to identify structured residuals;
-                VAL2@0;
-                VAL4@0;
-                VAL6@0;
-                VAL8@0;
-                VAL10@0;
-                VAL12@0;
-                SWB1@0;
-                SWB3@0;
-                SWB5@0;
-                SWB7@0;
-                SWB9@0;
-                SWB11@0;
-                
-                !Estimate structured residuals
-                L_val2 by VAL2@1;
-                L_val4 by VAL4@1;
-                L_val6 by VAL6@1;
-                L_val8 by VAL8@1;
-                L_val10 by VAL10@1;
-                L_val12 by VAL12@1;
-                
-                L_swb1 by SWB1@1;
-                L_swb3 by SWB3@1;
-                L_swb5 by SWB5@1;
-                L_swb7 by SWB7@1;
-                L_swb9 by SWB9@1;
-                L_swb11 by SWB11@1;
-                
-                !Constrain means/intercepts of residuals
-                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-                
-                !Set equal the variances of the 'residuals of the residuals'
-                !Freely estimate t1 structured residual.
-                L_val2;
-                L_val4;
-                L_val6;
-                L_val8;
-                L_val10;
-                L_val12;
-                L_swb1;
-                L_swb3;
-                L_swb5;
-                L_swb7;
-                L_swb9;
-                L_swb11;
-                
-                !AR amongst SRs;
-                L_val12 on L_val10;
-                L_val10 on L_val8;
-                L_val8 on L_val6;
-                L_val6 on L_val4;
-                L_val4 on L_val2;
-                
-                L_swb11 on L_swb9;
-                L_swb9 on L_swb7;
-                L_swb7 on L_swb5;
-                L_swb5 on L_swb3;
-                L_swb3 on L_swb1;
-                
-                !Crosslags (6 months);
-                L_val12 on L_swb11;
-                L_val10 on L_swb9;
-                L_val8  on L_swb7;
-                L_val6  on L_swb5;
-                L_val4  on L_swb3;
-                L_val2  on L_swb1;
-                
-                L_swb11 on L_val10;
-                L_swb9 on L_val8;
-                L_swb7 on L_val6;
-                L_swb5 on L_val4;
-                L_swb3 on L_val2;
-                
-                !Crosslags (18 months);
-                L_val12 on L_swb9;
-                L_val10 on L_swb7;
-                L_val8  on L_swb5;
-                L_val6  on L_swb3;
-                L_val4  on L_swb1;
-                
-                L_swb11 on L_val8;
-                L_swb9 on L_val6;
-                L_swb7 on L_val4;
-                L_swb5 on L_val2;
-                
-                
-MODEL YOUNG:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1*6.933 SWB3*6.910 SWB5*6.797 SWB7*6.827 SWB9*6.790 SWB11*6.818];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val*.631;
-eta_swb*0.517;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0 L_swb1@0;
-eta_swb with L_val2@0 L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2*.225 (r1Ya);
-L_val4*.212 (r1Y);
-L_val6 (r1Y);
-L_val8 (r1Y);
-L_val10 (r1Y);
-L_val12 (r1Y);
-L_swb1*0.541 (r2Ya);
-L_swb3*0.478 (r2Yb);
-L_swb5*0.413 (r2Y);
-L_swb7 (r2Y);
-L_swb9 (r2Y);
-L_swb11 (r2Y);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10*.288 (ar1Y);
-L_val10 on L_val8 (ar1Y);
-L_val8 on L_val6 (ar1Y);
-L_val6 on L_val4 (ar1Y);
-L_val4 on L_val2 (ar1Y);
-
-L_swb11 on L_swb9*0.198 (ar2Y);
-L_swb9 on L_swb7 (ar2Y);
-L_swb7 on L_swb5 (ar2Y);
-L_swb5 on L_swb3 (ar2Y);
-L_swb3 on L_swb1 (ar2Ya);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1Y);
-L_val10 on L_swb9 (cl1Y);
-L_val8  on L_swb7 (cl1Y);
-L_val6  on L_swb5 (cl1Y);
-L_val4  on L_swb3 (cl1Y);
-L_val2  on L_swb1 (cl1Ya);
-
-L_swb11 on L_val10 (cl2Y);
-L_swb9 on L_val8 (cl2Y);
-L_swb7 on L_val6 (cl2Y);
-L_swb5 on L_val4 (cl2Y);
-L_swb3 on L_val2 (cl2Ya);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3Y);
-L_val10 on L_swb7 (cl3Y);
-L_val8  on L_swb5 (cl3Y);
-L_val6  on L_swb3 (cl3Y);
-L_val4  on L_swb1 (cl3Y);
-
-L_swb11 on L_val8 (cl4Y);
-L_swb9 on L_val6 (cl4Y);
-L_swb7 on L_val4 (cl4Y);
-L_swb5 on L_val2 (cl4Y);
-
-
-MODEL MIDDLE:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1*6.887 SWB3*6.959 SWB5*6.875 SWB7*6.934 SWB9*6.930 SWB11*6.940];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val*.586;
-eta_swb*0.711;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0;
-eta_val with L_swb1@0;
-eta_swb with L_val2@0;
-eta_swb with L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2*.194 (r1Ma);
-L_val4*.183 (r1M);
-L_val6 (r1M);
-L_val8 (r1M);
-L_val10 (r1M);
-L_val12 (r1M);
-L_swb1*0.533 (r2Ma);
-L_swb3*0.390 (r2Mb);
-L_swb5*0.310 (r2M);
-L_swb7 (r2M);
-L_swb9 (r2M);
-L_swb11 (r2M);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10*0.207 (ar1M);
-L_val10 on L_val8 (ar1M);
-L_val8 on L_val6 (ar1M);
-L_val6 on L_val4 (ar1M);
-L_val4 on L_val2 (ar1M);
-
-L_swb11 on L_swb9*0.212 (ar2M);
-L_swb9 on L_swb7 (ar2M);
-L_swb7 on L_swb5 (ar2M);
-L_swb5 on L_swb3 (ar2M);
-L_swb3 on L_swb1 (ar2Ma);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1M);
-L_val10 on L_swb9 (cl1M);
-L_val8  on L_swb7 (cl1M);
-L_val6  on L_swb5 (cl1M);
-L_val4  on L_swb3 (cl1M);
-L_val2  on L_swb1 (cl1Ma);
-
-L_swb11 on L_val10 (cl2M);
-L_swb9 on L_val8 (cl2M);
-L_swb7 on L_val6 (cl2M);
-L_swb5 on L_val4 (cl2M);
-L_swb3 on L_val2 (cl2Ma);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3M);
-L_val10 on L_swb7 (cl3M);
-L_val8  on L_swb5 (cl3M);
-L_val6  on L_swb3 (cl3M);
-L_val4  on L_swb1 (cl3M);
-
-L_swb11 on L_val8 (cl4M);
-L_swb9 on L_val6 (cl4M);
-L_swb7 on L_val4 (cl4M);
-L_swb5 on L_val2 (cl4M);
-
-
-MODEL OLD:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1*7.128 SWB3*7.193 SWB5*7.184 SWB7*7.226 SWB9*7.239 SWB11*7.256];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val*.592;
-eta_swb*0.705;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0;
-eta_val with L_swb1@0;
-eta_swb with L_val2@0;
-eta_swb with L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2*.204 (r1Oa);
-L_val4*.186 (r1O);
-L_val6 (r1O);
-L_val8 (r1O);
-L_val10 (r1O);
-L_val12 (r1O);
-L_swb1*0.486 (r2Oa);
-L_swb3*0.370 (r2Ob);
-L_swb5*0.241 (r2O);
-L_swb7 (r2O);
-L_swb9 (r2O);
-L_swb11 (r2O);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10*.138 (ar1O);
-L_val10 on L_val8 (ar1O);
-L_val8 on L_val6 (ar1O);
-L_val6 on L_val4 (ar1O);
-L_val4 on L_val2 (ar1O);
-
-L_swb11 on L_swb9*0.075 (ar2O);
-L_swb9 on L_swb7 (ar2O);
-L_swb7 on L_swb5 (ar2O);
-L_swb5 on L_swb3 (ar2O);
-L_swb3 on L_swb1 (ar2Oa);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1O);
-L_val10 on L_swb9 (cl1O);
-L_val8  on L_swb7 (cl1O);
-L_val6  on L_swb5 (cl1O);
-L_val4  on L_swb3 (cl1O);
-L_val2  on L_swb1 (cl1Oa);
-
-L_swb11 on L_val10 (cl2O);
-L_swb9 on L_val8 (cl2O);
-L_swb7 on L_val6 (cl2O);
-L_swb5 on L_val4 (cl2O);
-L_swb3 on L_val2 (cl2Oa);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3O);
-L_val10 on L_swb7 (cl3O);
-L_val8  on L_swb5 (cl3O);
-L_val6  on L_swb3 (cl3O);
-L_val4  on L_swb1 (cl3O);
-
-L_swb11 on L_val8 (cl4O);
-L_swb9 on L_val6 (cl4O);
-L_swb7 on L_val4 (cl4O);
-L_swb5 on L_val2 
-
-!testing causal dominance
-Model Constraints: 
-NEW (var_vY var_sY V2_o_S1Y S2_o_V1Y dom_6mY
-V4_o_S1Y S4_o_V1Y dom_18mY
-var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
-V4_o_S1M S4_o_V1M dom_18mM
-var_vO var_sO V2_o_S1O S2_o_V1O dom_6mO
-V4_o_S1O S4_o_V1O dom_18mO
-mod6_YM mod6_YO mod6_MO
-mod18_YM mod18_YO mod18_MO);
-
-! Young
-var_vY = ar1Y**2*var_vY + cl1Y**2*var_sY + cl3Y**2*var_sY + r1Y;
-var_sY = ar2Y**2*var_sY + cl2Y**2*var_vY + cl4Y**2*var_vY;
-V2_o_S1Y = cl1Y*sqrt(var_sY)/sqrt(var_vY);
-S2_o_V1Y = cl2Y*sqrt(var_vY)/sqrt(var_sY);
-V4_o_S1Y = cl3Y*sqrt(var_sY)/sqrt(var_vY);
-S4_o_V1Y = cl4Y*sqrt(var_vY)/sqrt(var_sY);
-
-dom_6mY = V2_o_S1Y - S2_o_V1Y;
-dom_18mY = V4_o_S1Y - S4_o_V1Y;
-
-! Middle
-var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
-var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM;
-V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
-S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
-V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
-S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
-
-dom_6mM = V2_o_S1M - S2_o_V1M;
-dom_18mM = V4_o_S1M - S4_o_V1M;
-
-! Old
-var_vO = ar1O**2*var_vO + cl1O**2*var_sO + cl3O**2*var_sO + r1O;
-var_sO = ar2O**2*var_sO + cl2O**2*var_vO + cl4O**2*var_vO;
-V2_o_S1O = cl1O*sqrt(var_sO)/sqrt(var_vO);
-S2_o_V1O = cl2O*sqrt(var_vO)/sqrt(var_sO);
-V4_o_S1O = cl3O*sqrt(var_sO)/sqrt(var_vO);
-S4_o_V1O = cl4O*sqrt(var_vO)/sqrt(var_sO);
-
-dom_6mO = V2_o_S1O - S2_o_V1O;
-dom_18mO = V4_o_S1O - S4_o_V1O;
-
-! testing moderation effects of age
-mod6_YM = dom_6mY - dom_6mM;
-mod6_YO = dom_6mY - dom_6mO;
-mod6_MO = dom_6mM - dom_6mO;
-mod18_YM = dom_18mY - dom_18mM;
-mod18_YO = dom_18mY - dom_18mO;
-mod18_MO = dom_18mM - dom_18mO;
+                  !freely estimate occasion-specific grand means
+                  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                  [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+                  !factor variances are all free
+                  VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+                  SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+
+                  ! BETWEEN-PERSON LEVEL
+
+                  !Random intercepts
+                  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+                  !Constrain means of random intercepts
+                  [eta_val@0];
+                  [eta_swb@0];
+
+                  !Estimate variances of random intercept;
+                  eta_val;
+                  eta_swb;
+
+                  ! allowing for covariances among random intercepts
+                  eta_val with eta_swb;
+
+                  !constraining covariance among random intercepts and first residuals
+                  !otherwise these exogeneous variables would covary
+                  eta_val with L_val2@0 L_swb1@0;
+                  eta_swb with L_val2@0 L_swb1@0;
+
+                  ! WITHIN-PERSON LEVEL
+
+                  !Constrain observed residuals, to identify structured residuals;
+                  VAL2@0;
+                  VAL4@0;
+                  VAL6@0;
+                  VAL8@0;
+                  VAL10@0;
+                  VAL12@0;
+                  SWB1@0;
+                  SWB3@0;
+                  SWB5@0;
+                  SWB7@0;
+                  SWB9@0;
+                  SWB11@0;
+
+                  !Estimate structured residuals
+                  L_val2 by VAL2@1;
+                  L_val4 by VAL4@1;
+                  L_val6 by VAL6@1;
+                  L_val8 by VAL8@1;
+                  L_val10 by VAL10@1;
+                  L_val12 by VAL12@1;
+
+                  L_swb1 by SWB1@1;
+                  L_swb3 by SWB3@1;
+                  L_swb5 by SWB5@1;
+                  L_swb7 by SWB7@1;
+                  L_swb9 by SWB9@1;
+                  L_swb11 by SWB11@1;
+
+                  !Constrain means/intercepts of residuals
+                  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+                  !Set equal the variances of the 'residuals of the residuals'
+                  !Freely estimate t1 structured residual.
+                  L_val2;
+                  L_val4;
+                  L_val6;
+                  L_val8;
+                  L_val10;
+                  L_val12;
+                  L_swb1;
+                  L_swb3;
+                  L_swb5;
+                  L_swb7;
+                  L_swb9;
+                  L_swb11;
+
+                  !AR amongst SRs;
+                  L_val12 on L_val10;
+                  L_val10 on L_val8;
+                  L_val8 on L_val6;
+                  L_val6 on L_val4;
+                  L_val4 on L_val2;
+
+                  L_swb11 on L_swb9;
+                  L_swb9 on L_swb7;
+                  L_swb7 on L_swb5;
+                  L_swb5 on L_swb3;
+                  L_swb3 on L_swb1;
+
+                  !Crosslags (6 months);
+                  L_val12 on L_swb11;
+                  L_val10 on L_swb9;
+                  L_val8  on L_swb7;
+                  L_val6  on L_swb5;
+                  L_val4  on L_swb3;
+                  L_val2  on L_swb1;
+
+                  L_swb11 on L_val10;
+                  L_swb9 on L_val8;
+                  L_swb7 on L_val6;
+                  L_swb5 on L_val4;
+                  L_swb3 on L_val2;
+
+                  !Crosslags (18 months);
+                  L_val12 on L_swb9;
+                  L_val10 on L_swb7;
+                  L_val8  on L_swb5;
+                  L_val6  on L_swb3;
+                  L_val4  on L_swb1;
+
+                  L_swb11 on L_val8;
+                  L_swb9 on L_val6;
+                  L_swb7 on L_val4;
+                  L_swb5 on L_val2;
+
+
+                  MODEL YOUNG:
+
+                  !freely estimate occasion-specific grand means
+                  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                  [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+                  ! BETWEEN-PERSON LEVEL
+
+                  !Random intercepts
+                  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+                  !Constrain means of random intercepts
+                  [eta_val@0];
+                  [eta_swb@0];
+
+                  !Estimate variances of random intercept;
+                  eta_val;
+                  eta_swb;
+
+                  !allowing for covariances among random intercepts
+                  eta_val with eta_swb;
+
+                  !constraining covariance among random intercepts and first residuals
+                  !otherwise these exogeneous variables would covary
+                  eta_val with L_val2@0 L_swb1@0;
+                  eta_swb with L_val2@0 L_swb1@0;
+
+                  ! WITHIN-PERSON LEVEL
+
+                  !Constrain observed residuals, to identify structured residuals;
+                  VAL2@0;
+                  VAL4@0;
+                  VAL6@0;
+                  VAL8@0;
+                  VAL10@0;
+                  VAL12@0;
+                  SWB1@0;
+                  SWB3@0;
+                  SWB5@0;
+                  SWB7@0;
+                  SWB9@0;
+                  SWB11@0;
+
+                  !Estimate structured residuals
+                  L_val2 by VAL2@1;
+                  L_val4 by VAL4@1;
+                  L_val6 by VAL6@1;
+                  L_val8 by VAL8@1;
+                  L_val10 by VAL10@1;
+                  L_val12 by VAL12@1;
+
+                  L_swb1 by SWB1@1;
+                  L_swb3 by SWB3@1;
+                  L_swb5 by SWB5@1;
+                  L_swb7 by SWB7@1;
+                  L_swb9 by SWB9@1;
+                  L_swb11 by SWB11@1;
+
+                  !Constrain means/intercepts of residuals
+                  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+                  !Set equal the variances of the 'residuals of the residuals'
+                  !Freely estimate t1 structured residual.
+                  L_val2 (r1Ya);
+                  L_val4 (r1Y);
+                  L_val6 (r1Y);
+                  L_val8 (r1Y);
+                  L_val10 (r1Y);
+                  L_val12 (r1Y);
+                  L_swb1 (r2Ya);
+                  L_swb3 (r2Yb);
+                  L_swb5 (r2Y);
+                  L_swb7 (r2Y);
+                  L_swb9 (r2Y);
+                  L_swb11 (r2Y);
+
+                  !AR amongst SRs with assumed stationarity;
+                  L_val12 on L_val10 (ar1Y);
+                  L_val10 on L_val8 (ar1Y);
+                  L_val8 on L_val6 (ar1Y);
+                  L_val6 on L_val4 (ar1Y);
+                  L_val4 on L_val2 (ar1Y);
+
+                  L_swb11 on L_swb9 (ar2Y);
+                  L_swb9 on L_swb7 (ar2Y);
+                  L_swb7 on L_swb5 (ar2Y);
+                  L_swb5 on L_swb3 (ar2Y);
+                  L_swb3 on L_swb1 (ar2Ya);
+
+                  !Constrained crosslags (6 months);
+                  L_val12 on L_swb11 (cl1Y);
+                  L_val10 on L_swb9 (cl1Y);
+                  L_val8  on L_swb7 (cl1Y);
+                  L_val6  on L_swb5 (cl1Y);
+                  L_val4  on L_swb3 (cl1Y);
+                  L_val2  on L_swb1 (cl1Ya);
+
+                  L_swb11 on L_val10 (cl2Y);
+                  L_swb9 on L_val8 (cl2Y);
+                  L_swb7 on L_val6 (cl2Y);
+                  L_swb5 on L_val4 (cl2Y);
+                  L_swb3 on L_val2 (cl2Ya);
+
+                  !Constrained crosslags (18 months);
+                  L_val12 on L_swb9 (cl3Y);
+                  L_val10 on L_swb7 (cl3Y);
+                  L_val8  on L_swb5 (cl3Y);
+                  L_val6  on L_swb3 (cl3Y);
+                  L_val4  on L_swb1 (cl3Y);
+
+                  L_swb11 on L_val8 (cl4Y);
+                  L_swb9 on L_val6 (cl4Y);
+                  L_swb7 on L_val4 (cl4Y);
+                  L_swb5 on L_val2 (cl4Y);
+
+
+                  MODEL MIDDLE:
+
+                  !freely estimate occasion-specific grand means
+                  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                  [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+                  ! BETWEEN-PERSON LEVEL
+
+                  !Random intercepts
+                  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+                  !Constrain means of random intercepts
+                  [eta_val@0];
+                  [eta_swb@0];
+
+                  !Estimate variances of random intercept;
+                  eta_val;
+                  eta_swb;
+
+                  ! allowing for covariances among random intercepts
+                  eta_val with eta_swb;
+
+                  !constraining covariance among random intercepts and first residuals
+                  !otherwise these exogeneous variables would covary
+                  eta_val with L_val2@0;
+                  eta_val with L_swb1@0;
+                  eta_swb with L_val2@0;
+                  eta_swb with L_swb1@0;
+
+                  ! WITHIN-PERSON LEVEL
+
+                  !Constrain observed residuals, to identify structured residuals;
+                  VAL2@0;
+                  VAL4@0;
+                  VAL6@0;
+                  VAL8@0;
+                  VAL10@0;
+                  VAL12@0;
+                  SWB1@0;
+                  SWB3@0;
+                  SWB5@0;
+                  SWB7@0;
+                  SWB9@0;
+                  SWB11@0;
+
+                  !Estimate structured residuals
+                  L_val2 by VAL2@1;
+                  L_val4 by VAL4@1;
+                  L_val6 by VAL6@1;
+                  L_val8 by VAL8@1;
+                  L_val10 by VAL10@1;
+                  L_val12 by VAL12@1;
+
+                  L_swb1 by SWB1@1;
+                  L_swb3 by SWB3@1;
+                  L_swb5 by SWB5@1;
+                  L_swb7 by SWB7@1;
+                  L_swb9 by SWB9@1;
+                  L_swb11 by SWB11@1;
+
+                  !Constrain means/intercepts of residuals
+                  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+                  !Set equal the variances of the 'residuals of the residuals'
+                  !Freely estimate t1 structured residual.
+                  L_val2 (r1Ma);
+                  L_val4 (r1M);
+                  L_val6 (r1M);
+                  L_val8 (r1M);
+                  L_val10 (r1M);
+                  L_val12 (r1M);
+                  L_swb1 (r2Ma);
+                  L_swb3 (r2Mb);
+                  L_swb5 (r2M);
+                  L_swb7 (r2M);
+                  L_swb9 (r2M);
+                  L_swb11 (r2M);
+
+                  !AR amongst SRs with assumed stationarity;
+                  L_val12 on L_val10 (ar1M);
+                  L_val10 on L_val8 (ar1M);
+                  L_val8 on L_val6 (ar1M);
+                  L_val6 on L_val4 (ar1M);
+                  L_val4 on L_val2 (ar1M);
+
+                  L_swb11 on L_swb9 (ar2M);
+                  L_swb9 on L_swb7 (ar2M);
+                  L_swb7 on L_swb5 (ar2M);
+                  L_swb5 on L_swb3 (ar2M);
+                  L_swb3 on L_swb1 (ar2Ma);
+
+                  !Constrained crosslags (6 months);
+                  L_val12 on L_swb11 (cl1M);
+                  L_val10 on L_swb9 (cl1M);
+                  L_val8  on L_swb7 (cl1M);
+                  L_val6  on L_swb5 (cl1M);
+                  L_val4  on L_swb3 (cl1M);
+                  L_val2  on L_swb1 (cl1Ma);
+
+                  L_swb11 on L_val10 (cl2M);
+                  L_swb9 on L_val8 (cl2M);
+                  L_swb7 on L_val6 (cl2M);
+                  L_swb5 on L_val4 (cl2M);
+                  L_swb3 on L_val2 (cl2Ma);
+
+                  !Constrained crosslags (18 months);
+                  L_val12 on L_swb9 (cl3M);
+                  L_val10 on L_swb7 (cl3M);
+                  L_val8  on L_swb5 (cl3M);
+                  L_val6  on L_swb3 (cl3M);
+                  L_val4  on L_swb1 (cl3M);
+
+                  L_swb11 on L_val8 (cl4M);
+                  L_swb9 on L_val6 (cl4M);
+                  L_swb7 on L_val4 (cl4M);
+                  L_swb5 on L_val2 (cl4M);
+
+
+                  MODEL OLD:
+
+                  !freely estimate occasion-specific grand means
+                  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                  [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+                  ! BETWEEN-PERSON LEVEL
+
+                  !Random intercepts
+                  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+                  !Constrain means of random intercepts
+                  [eta_val@0];
+                  [eta_swb@0];
+
+                  !Estimate variances of random intercept;
+                  eta_val;
+                  eta_swb;
+
+                  ! allowing for covariances among random intercepts
+                  eta_val with eta_swb;
+
+                  !constraining covariance among random intercepts and first residuals
+                  !otherwise these exogeneous variables would covary
+                  eta_val with L_val2@0;
+                  eta_val with L_swb1@0;
+                  eta_swb with L_val2@0;
+                  eta_swb with L_swb1@0;
+
+                  ! WITHIN-PERSON LEVEL
+
+                  !Constrain observed residuals, to identify structured residuals;
+                  VAL2@0;
+                  VAL4@0;
+                  VAL6@0;
+                  VAL8@0;
+                  VAL10@0;
+                  VAL12@0;
+                  SWB1@0;
+                  SWB3@0;
+                  SWB5@0;
+                  SWB7@0;
+                  SWB9@0;
+                  SWB11@0;
+
+                  !Estimate structured residuals
+                  L_val2 by VAL2@1;
+                  L_val4 by VAL4@1;
+                  L_val6 by VAL6@1;
+                  L_val8 by VAL8@1;
+                  L_val10 by VAL10@1;
+                  L_val12 by VAL12@1;
+
+                  L_swb1 by SWB1@1;
+                  L_swb3 by SWB3@1;
+                  L_swb5 by SWB5@1;
+                  L_swb7 by SWB7@1;
+                  L_swb9 by SWB9@1;
+                  L_swb11 by SWB11@1;
+
+                  !Constrain means/intercepts of residuals
+                  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+                  !Set equal the variances of the 'residuals of the residuals'
+                  !Freely estimate t1 structured residual.
+                  L_val2 (r1Oa);
+                  L_val4 (r1O);
+                  L_val6 (r1O);
+                  L_val8 (r1O);
+                  L_val10 (r1O);
+                  L_val12 (r1O);
+                  L_swb1 (r2Oa);
+                  L_swb3 (r2Ob);
+                  L_swb5 (r2O);
+                  L_swb7 (r2O);
+                  L_swb9 (r2O);
+                  L_swb11 (r2O);
+
+                  !AR amongst SRs with assumed stationarity;
+                  L_val12 on L_val10 (ar1O);
+                  L_val10 on L_val8 (ar1O);
+                  L_val8 on L_val6 (ar1O);
+                  L_val6 on L_val4 (ar1O);
+                  L_val4 on L_val2 (ar1O);
+
+                  L_swb11 on L_swb9 (ar2O);
+                  L_swb9 on L_swb7 (ar2O);
+                  L_swb7 on L_swb5 (ar2O);
+                  L_swb5 on L_swb3 (ar2O);
+                  L_swb3 on L_swb1 (ar2Oa);
+
+                  !Constrained crosslags (6 months);
+                  L_val12 on L_swb11 (cl1O);
+                  L_val10 on L_swb9 (cl1O);
+                  L_val8  on L_swb7 (cl1O);
+                  L_val6  on L_swb5 (cl1O);
+                  L_val4  on L_swb3 (cl1O);
+                  L_val2  on L_swb1 (cl1Oa);
+
+                  L_swb11 on L_val10 (cl2O);
+                  L_swb9 on L_val8 (cl2O);
+                  L_swb7 on L_val6 (cl2O);
+                  L_swb5 on L_val4 (cl2O);
+                  L_swb3 on L_val2 (cl2Oa);
+
+                  !Constrained crosslags (18 months);
+                  L_val12 on L_swb9 (cl3O);
+                  L_val10 on L_swb7 (cl3O);
+                  L_val8  on L_swb5 (cl3O);
+                  L_val6  on L_swb3 (cl3O);
+                  L_val4  on L_swb1 (cl3O);
+
+                  L_swb11 on L_val8 (cl4O);
+                  L_swb9 on L_val6 (cl4O);
+                  L_swb7 on L_val4 (cl4O);
+                  L_swb5 on L_val2 (cl4O);
+
+
+                  !testing causal dominance
+                  Model Constraints:
+                  NEW (var_vY var_sY V2_o_S1Y S2_o_V1Y dom_6mY
+                  V4_o_S1Y S4_o_V1Y dom_18mY
+                  var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
+                  V4_o_S1M S4_o_V1M dom_18mM
+                  var_vO var_sO V2_o_S1O S2_o_V1O dom_6mO
+                  V4_o_S1O S4_o_V1O dom_18mO
+                  mod6_YM mod6_YO mod6_MO
+                  mod18_YM mod18_YO mod18_MO);
+
+                  ! Young
+                  var_vY = ar1Y**2*var_vY + cl1Y**2*var_sY + cl3Y**2*var_sY + r1Y;
+                  var_sY = ar2Y**2*var_sY + cl2Y**2*var_vY + cl4Y**2*var_vY + r2Y;
+
+                  V2_o_S1Y = cl1Y*sqrt(var_sY)/sqrt(var_vY);
+                  S2_o_V1Y = cl2Y*sqrt(var_vY)/sqrt(var_sY);
+                  V4_o_S1Y = cl3Y*sqrt(var_sY)/sqrt(var_vY);
+                  S4_o_V1Y = cl4Y*sqrt(var_vY)/sqrt(var_sY);
+
+                  dom_6mY = V2_o_S1Y - S2_o_V1Y;
+                  dom_18mY = V4_o_S1Y - S4_o_V1Y;
+
+                  ! Middle
+                  var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
+                  var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
+
+                  V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
+                  S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
+                  V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
+                  S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
+
+                  dom_6mM = V2_o_S1M - S2_o_V1M;
+                  dom_18mM = V4_o_S1M - S4_o_V1M;
+
+                  ! Old
+                  var_vO = ar1O**2*var_vO + cl1O**2*var_sO + cl3O**2*var_sO + r1O;
+                  var_sO = ar2O**2*var_sO + cl2O**2*var_vO + cl4O**2*var_vO + r2O;
+
+                  V2_o_S1O = cl1O*sqrt(var_sO)/sqrt(var_vO);
+                  S2_o_V1O = cl2O*sqrt(var_vO)/sqrt(var_sO);
+                  V4_o_S1O = cl3O*sqrt(var_sO)/sqrt(var_vO);
+                  S4_o_V1O = cl4O*sqrt(var_vO)/sqrt(var_sO);
+
+                  dom_6mO = V2_o_S1O - S2_o_V1O;
+                  dom_18mO = V4_o_S1O - S4_o_V1O;
+
+                  ! testing moderation effects of age
+                  mod6_YM = dom_6mY - dom_6mM;
+                  mod6_YO = dom_6mY - dom_6mO;
+                  mod6_MO = dom_6mM - dom_6mO;
+                  mod18_YM = dom_18mY - dom_18mM;
+                  mod18_YO = dom_18mY - dom_18mO;
+                  mod18_MO = dom_18mM - dom_18mO;
                 ")
     
     Model <- mplusObject(
@@ -8789,9 +8791,10 @@ mod18_MO = dom_18mM - dom_18mO;
   }
 }
 
-# separate loop for affective SWB
 
-for (val in 1:3){  # val = indices for value
+### 6.2.1.2 open - aff SWB ####
+
+for (val in 1:1){  # val = indices for value
   for (swb in 2:2){ # swb = indices for subject well-being;
     
     ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
@@ -9343,6 +9346,560 @@ mod18_MO = dom_18mM - dom_18mO;
 }
 
 
+### 6.2.1.4 cons - aff SWB ####
+
+for (val in 2:2){  # val = indices for value
+  for (swb in 2:2){ # swb = indices for subject well-being;
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
+    MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
+                               
+  !freely estimate occasion-specific grand means
+  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+  [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+
+  !factor variances are all free
+  VAL2 VAL4 VAL6 VAL8 VAL10 VAL12;
+  SWB1 SWB3 SWB5 SWB7 SWB9 SWB11;
+
+  ! BETWEEN-PERSON LEVEL
+
+  !Random intercepts
+  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+  !Constrain means of random intercepts
+  [eta_val@0];
+  [eta_swb@0];
+
+  !Estimate variances of random intercept;
+  eta_val;
+  eta_swb;
+
+  ! allowing for covariances among random intercepts
+  eta_val with eta_swb;
+
+  !constraining covariance among random intercepts and first residuals
+  !otherwise these exogeneous variables would covary
+  eta_val with L_val2@0 L_swb1@0;
+  eta_swb with L_val2@0 L_swb1@0;
+
+  ! WITHIN-PERSON LEVEL
+
+  !Constrain observed residuals, to identify structured residuals
+  VAL2@0;
+  VAL4@0;
+  VAL6@0;
+  VAL8@0;
+  VAL10@0;
+  VAL12@0;
+  SWB1@0;
+  SWB3@0;
+  SWB5@0;
+  SWB7@0;
+  SWB9@0;
+  SWB11@0;
+
+  !Estimate structured residuals
+  L_val2 by VAL2@1;
+  L_val4 by VAL4@1;
+  L_val6 by VAL6@1;
+  L_val8 by VAL8@1;
+  L_val10 by VAL10@1;
+  L_val12 by VAL12@1;
+
+  L_swb1 by SWB1@1;
+  L_swb3 by SWB3@1;
+  L_swb5 by SWB5@1;
+  L_swb7 by SWB7@1;
+  L_swb9 by SWB9@1;
+  L_swb11 by SWB11@1;
+
+  !Constrain means/intercepts of residuals
+  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+  !Set equal the variances of the 'residuals of the residuals'
+  !Freely estimate t1 structured residual.
+  L_val2;
+  L_val4;
+  L_val6;
+  L_val8;
+  L_val10;
+  L_val12;
+  L_swb1;
+  L_swb3;
+  L_swb5;
+  L_swb7;
+  L_swb9;
+  L_swb11;
+
+  !AR amongst SRs;
+  L_val12 on L_val10;
+  L_val10 on L_val8;
+  L_val8 on L_val6;
+  L_val6 on L_val4;
+  L_val4 on L_val2;
+
+  L_swb11 on L_swb9;
+  L_swb9 on L_swb7;
+  L_swb7 on L_swb5;
+  L_swb5 on L_swb3;
+  L_swb3 on L_swb1;
+
+  !Crosslags (6 months);
+  L_val12 on L_swb11;
+  L_val10 on L_swb9;
+  L_val8  on L_swb7;
+  L_val6  on L_swb5;
+  L_val4  on L_swb3;
+  L_val2  on L_swb1;
+
+  L_swb11 on L_val10;
+  L_swb9 on L_val8;
+  L_swb7 on L_val6;
+  L_swb5 on L_val4;
+  L_swb3 on L_val2;
+
+  !Crosslags (18 months);
+  L_val12 on L_swb9;
+  L_val10 on L_swb7;
+  L_val8  on L_swb5;
+  L_val6  on L_swb3;
+  L_val4  on L_swb1;
+
+  L_swb11 on L_val8;
+  L_swb9 on L_val6;
+  L_swb7 on L_val4;
+  L_swb5 on L_val2;
+
+
+  MODEL YOUNG:
+
+  !freely estimate occasion-specific grand means
+  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+  [SWB1*4.498 SWB3*4.470 SWB5*4.369 SWB7*4.429 SWB9*4.423 SWB11*4.434];
+
+  ! BETWEEN-PERSON LEVEL
+
+  !Random intercepts
+  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+  !Constrain means of random intercepts
+  [eta_val@0];
+  [eta_swb@0];
+
+  !Estimate variances of random intercept;
+  eta_val;
+  eta_swb*.431;
+
+  ! allowing for covariances among random intercepts
+  eta_val with eta_swb;
+
+  !constraining covariance among random intercepts and first residuals
+  !otherwise these exogeneous variables would covary
+  eta_val with L_val2@0 L_swb1@0;
+  eta_swb with L_val2@0 L_swb1@0;
+
+  ! WITHIN-PERSON LEVEL
+
+  !Constrain observed residuals, to identify structured residuals;
+  VAL2@0;
+  VAL4@0;
+  VAL6@0;
+  VAL8@0;
+  VAL10@0;
+  VAL12@0;
+  SWB1@0;
+  SWB3@0;
+  SWB5@0;
+  SWB7@0;
+  SWB9@0;
+  SWB11@0;
+
+  !Estimate structured residuals
+  L_val2 by VAL2@1;
+  L_val4 by VAL4@1;
+  L_val6 by VAL6@1;
+  L_val8 by VAL8@1;
+  L_val10 by VAL10@1;
+  L_val12 by VAL12@1;
+
+  L_swb1 by SWB1@1;
+  L_swb3 by SWB3@1;
+  L_swb5 by SWB5@1;
+  L_swb7 by SWB7@1;
+  L_swb9 by SWB9@1;
+  L_swb11 by SWB11@1;
+
+  !Constrain means/intercepts of residuals
+  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+  !Set equal the variances of the 'residuals of the residuals'
+  !Freely estimate t1 structured residual.
+  L_val2 (r1Ya);
+  L_val4 (r1Y);
+  L_val6 (r1Y);
+  L_val8 (r1Y);
+  L_val10 (r1Y);
+  L_val12 (r1Y);
+  L_swb1*.370 (r2Ya);
+  L_swb3*.388 (r2Yb);
+  L_swb5*.342 (r2Y);
+  L_swb7 (r2Y);
+  L_swb9 (r2Y);
+  L_swb11 (r2Y);
+
+  !AR amongst SRs with assumed stationarity;
+  L_val12 on L_val10 (ar1Y);
+  L_val10 on L_val8 (ar1Y);
+  L_val8 on L_val6 (ar1Y);
+  L_val6 on L_val4 (ar1Y);
+  L_val4 on L_val2 (ar1Y);
+
+  L_swb11 on L_swb9*.194 (ar2Y);
+  L_swb9 on L_swb7 (ar2Y);
+  L_swb7 on L_swb5 (ar2Y);
+  L_swb5 on L_swb3 (ar2Y);
+  L_swb3 on L_swb1 (ar2Ya);
+
+  !Constrained crosslags (6 months);
+  L_val12 on L_swb11 (cl1Y);
+  L_val10 on L_swb9 (cl1Y);
+  L_val8  on L_swb7 (cl1Y);
+  L_val6  on L_swb5 (cl1Y);
+  L_val4  on L_swb3 (cl1Y);
+  L_val2  on L_swb1 (cl1Ya);
+
+  L_swb11 on L_val10 (cl2Y);
+  L_swb9 on L_val8 (cl2Y);
+  L_swb7 on L_val6 (cl2Y);
+  L_swb5 on L_val4 (cl2Y);
+  L_swb3 on L_val2 (cl2Ya);
+
+  !Constrained crosslags (18 months);
+  L_val12 on L_swb9 (cl3Y);
+  L_val10 on L_swb7 (cl3Y);
+  L_val8  on L_swb5 (cl3Y);
+  L_val6  on L_swb3 (cl3Y);
+  L_val4  on L_swb1 (cl3Y);
+
+  L_swb11 on L_val8 (cl4Y);
+  L_swb9 on L_val6 (cl4Y);
+  L_swb7 on L_val4 (cl4Y);
+  L_swb5 on L_val2 (cl4Y);
+
+
+  MODEL MIDDLE:
+
+  !freely estimate occasion-specific grand means
+  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+  [SWB1*4.540 SWB3*4.507 SWB5*4.476 SWB7*4.504 SWB9*4.520 SWB11*4.528];
+
+  ! BETWEEN-PERSON LEVEL
+
+  !Random intercepts
+  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+  !Constrain means of random intercepts
+  [eta_val@0];
+  [eta_swb@0];
+
+  !Estimate variances of random intercept;
+  eta_val;
+  eta_swb*.491;
+
+  ! allowing for covariances among random intercepts
+  eta_val with eta_swb;
+
+  !constraining covariance among random intercepts and first residuals
+  !otherwise these exogeneous variables would covary
+  eta_val with L_val2@0;
+  eta_val with L_swb1@0;
+  eta_swb with L_val2@0;
+  eta_swb with L_swb1@0;
+
+  ! WITHIN-PERSON LEVEL
+
+  !Constrain observed residuals, to identify structured residuals;
+  VAL2@0;
+  VAL4@0;
+  VAL6@0;
+  VAL8@0;
+  VAL10@0;
+  VAL12@0;
+  SWB1@0;
+  SWB3@0;
+  SWB5@0;
+  SWB7@0;
+  SWB9@0;
+  SWB11@0;
+
+  !Estimate structured residuals
+  L_val2 by VAL2@1;
+  L_val4 by VAL4@1;
+  L_val6 by VAL6@1;
+  L_val8 by VAL8@1;
+  L_val10 by VAL10@1;
+  L_val12 by VAL12@1;
+
+  L_swb1 by SWB1@1;
+  L_swb3 by SWB3@1;
+  L_swb5 by SWB5@1;
+  L_swb7 by SWB7@1;
+  L_swb9 by SWB9@1;
+  L_swb11 by SWB11@1;
+
+  !Constrain means/intercepts of residuals
+  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+  !Set equal the variances of the 'residuals of the residuals'
+  !Freely estimate t1 structured residual.
+  L_val2 (r1Ma);
+  L_val4 (r1M);
+  L_val6 (r1M);
+  L_val8 (r1M);
+  L_val10 (r1M);
+  L_val12 (r1M);
+  L_swb1*.353 (r2Ma);
+  L_swb3*.343 (r2Mb);
+  L_swb5*.265 (r2M);
+  L_swb7 (r2M);
+  L_swb9 (r2M);
+  L_swb11 (r2M);
+
+  !AR amongst SRs with assumed stationarity;
+  L_val12 on L_val10 (ar1M);
+  L_val10 on L_val8 (ar1M);
+  L_val8 on L_val6 (ar1M);
+  L_val6 on L_val4 (ar1M);
+  L_val4 on L_val2 (ar1M);
+
+  L_swb11 on L_swb9*.194 (ar2M);
+  L_swb9 on L_swb7 (ar2M);
+  L_swb7 on L_swb5 (ar2M);
+  L_swb5 on L_swb3 (ar2M);
+  L_swb3 on L_swb1 (ar2Ma);
+
+  !Constrained crosslags (6 months);
+  L_val12 on L_swb11 (cl1M);
+  L_val10 on L_swb9 (cl1M);
+  L_val8  on L_swb7 (cl1M);
+  L_val6  on L_swb5 (cl1M);
+  L_val4  on L_swb3 (cl1M);
+  L_val2  on L_swb1 (cl1Ma);
+
+  L_swb11 on L_val10 (cl2M);
+  L_swb9 on L_val8 (cl2M);
+  L_swb7 on L_val6 (cl2M);
+  L_swb5 on L_val4 (cl2M);
+  L_swb3 on L_val2 (cl2Ma);
+
+  !Constrained crosslags (18 months);
+  L_val12 on L_swb9 (cl3M);
+  L_val10 on L_swb7 (cl3M);
+  L_val8  on L_swb5 (cl3M);
+  L_val6  on L_swb3 (cl3M);
+  L_val4  on L_swb1 (cl3M);
+
+  L_swb11 on L_val8 (cl4M);
+  L_swb9 on L_val6 (cl4M);
+  L_swb7 on L_val4 (cl4M);
+  L_swb5 on L_val2 (cl4M);
+
+
+  MODEL OLD:
+
+  !freely estimate occasion-specific grand means
+  [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+  [SWB1*4.627 SWB3*4.627 SWB5*4.581 SWB7*4.604 SWB9*4.616 SWB11*4.622];
+
+  ! BETWEEN-PERSON LEVEL
+
+  !Random intercepts
+  eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+  eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+
+  !Constrain means of random intercepts
+  [eta_val@0];
+  [eta_swb@0];
+
+  !Estimate variances of random intercept;
+  eta_val;
+  eta_swb*.530;
+
+  ! allowing for covariances among random intercepts
+  eta_val with eta_swb;
+
+  !constraining covariance among random intercepts and first residuals
+  !otherwise these exogeneous variables would covary
+  eta_val with L_val2@0;
+  eta_val with L_swb1@0;
+  eta_swb with L_val2@0;
+  eta_swb with L_swb1@0;
+
+  ! WITHIN-PERSON LEVEL
+
+  !Constrain observed residuals, to identify structured residuals;
+  VAL2@0;
+  VAL4@0;
+  VAL6@0;
+  VAL8@0;
+  VAL10@0;
+  VAL12@0;
+  SWB1@0;
+  SWB3@0;
+  SWB5@0;
+  SWB7@0;
+  SWB9@0;
+  SWB11@0;
+
+  !Estimate structured residuals
+  L_val2 by VAL2@1;
+  L_val4 by VAL4@1;
+  L_val6 by VAL6@1;
+  L_val8 by VAL8@1;
+  L_val10 by VAL10@1;
+  L_val12 by VAL12@1;
+
+  L_swb1 by SWB1@1;
+  L_swb3 by SWB3@1;
+  L_swb5 by SWB5@1;
+  L_swb7 by SWB7@1;
+  L_swb9 by SWB9@1;
+  L_swb11 by SWB11@1;
+
+  !Constrain means/intercepts of residuals
+  [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+  [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+
+  !Set equal the variances of the 'residuals of the residuals'
+  !Freely estimate t1 structured residual.
+  L_val2 (r1Oa);
+  L_val4 (r1O);
+  L_val6 (r1O);
+  L_val8 (r1O);
+  L_val10 (r1O);
+  L_val12 (r1O);
+  L_swb1*.315 (r2Oa);
+  L_swb3*.246 (r2Ob);
+  L_swb5*.208 (r2O);
+  L_swb7 (r2O);
+  L_swb9 (r2O);
+  L_swb11 (r2O);
+
+  !AR amongst SRs with assumed stationarity;
+  L_val12 on L_val10 (ar1O);
+  L_val10 on L_val8 (ar1O);
+  L_val8 on L_val6 (ar1O);
+  L_val6 on L_val4 (ar1O);
+  L_val4 on L_val2 (ar1O);
+
+  L_swb11 on L_swb9*.188 (ar2O);
+  L_swb9 on L_swb7 (ar2O);
+  L_swb7 on L_swb5 (ar2O);
+  L_swb5 on L_swb3 (ar2O);
+  L_swb3 on L_swb1 (ar2Oa);
+
+  !Constrained crosslags (6 months);
+  L_val12 on L_swb11 (cl1O);
+  L_val10 on L_swb9 (cl1O);
+  L_val8  on L_swb7 (cl1O);
+  L_val6  on L_swb5 (cl1O);
+  L_val4  on L_swb3 (cl1O);
+  L_val2  on L_swb1 (cl1Oa);
+
+  L_swb11 on L_val10 (cl2O);
+  L_swb9 on L_val8 (cl2O);
+  L_swb7 on L_val6 (cl2O);
+  L_swb5 on L_val4 (cl2O);
+  L_swb3 on L_val2 (cl2Oa);
+
+  !Constrained crosslags (18 months);
+  L_val12 on L_swb9 (cl3O);
+  L_val10 on L_swb7 (cl3O);
+  L_val8  on L_swb5 (cl3O);
+  L_val6  on L_swb3 (cl3O);
+  L_val4  on L_swb1 (cl3O);
+
+  L_swb11 on L_val8 (cl4O);
+  L_swb9 on L_val6 (cl4O);
+  L_swb7 on L_val4 (cl4O);
+  L_swb5 on L_val2 (cl4O);
+
+
+  !testing causal dominance
+  Model Constraints:
+  NEW (var_vY var_sY V2_o_S1Y S2_o_V1Y dom_6mY
+  V4_o_S1Y S4_o_V1Y dom_18mY
+  var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
+  V4_o_S1M S4_o_V1M dom_18mM
+  var_vO var_sO V2_o_S1O S2_o_V1O dom_6mO
+  V4_o_S1O S4_o_V1O dom_18mO
+  mod6_YM mod6_YO mod6_MO
+  mod18_YM mod18_YO mod18_MO);
+
+  ! Young
+  var_vY = ar1Y**2*var_vY + cl1Y**2*var_sY + cl3Y**2*var_sY + r1Y;
+  var_sY = ar2Y**2*var_sY + cl2Y**2*var_vY + cl4Y**2*var_vY + r2Y;
+
+  V2_o_S1Y = cl1Y*sqrt(var_sY)/sqrt(var_vY);
+  S2_o_V1Y = cl2Y*sqrt(var_vY)/sqrt(var_sY);
+  V4_o_S1Y = cl3Y*sqrt(var_sY)/sqrt(var_vY);
+  S4_o_V1Y = cl4Y*sqrt(var_vY)/sqrt(var_sY);
+
+  dom_6mY = V2_o_S1Y - S2_o_V1Y;
+  dom_18mY = V4_o_S1Y - S4_o_V1Y;
+
+  ! Middle
+  var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
+  var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
+
+  V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
+  S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
+  V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
+  S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
+
+  dom_6mM = V2_o_S1M - S2_o_V1M;
+  dom_18mM = V4_o_S1M - S4_o_V1M;
+
+  ! Old
+  var_vO = ar1O**2*var_vO + cl1O**2*var_sO + cl3O**2*var_sO + r1O;
+  var_sO = ar2O**2*var_sO + cl2O**2*var_vO + cl4O**2*var_vO + r2O;
+
+  V2_o_S1O = cl1O*sqrt(var_sO)/sqrt(var_vO);
+  S2_o_V1O = cl2O*sqrt(var_vO)/sqrt(var_sO);
+  V4_o_S1O = cl3O*sqrt(var_sO)/sqrt(var_vO);
+  S4_o_V1O = cl4O*sqrt(var_vO)/sqrt(var_sO);
+
+  dom_6mO = V2_o_S1O - S2_o_V1O;
+  dom_18mO = V4_o_S1O - S4_o_V1O;
+
+  ! testing moderation effects of age
+  mod6_YM = dom_6mY - dom_6mM;
+  mod6_YO = dom_6mY - dom_6mO;
+  mod6_MO = dom_6mM - dom_6mO;
+  mod18_YM = dom_18mY - dom_18mM;
+  mod18_YO = dom_18mY - dom_18mO;
+  mod18_MO = dom_18mM - dom_18mO;
+                ")
+    
+    Model <- mplusObject(
+      VARIABLE=ITEMS,
+      usevariables = names(data),
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS = 10000;",
+      MODEL=MODEL,rdata=data,autov=T,
+      OUTPUT="STDYX CINTERVAL;")
+    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
+  }
+}
+
+
 ### 6.2.2 Gender (Robustness Check) ####
 
 
@@ -9377,405 +9934,406 @@ grouping is gender (1=MALE 2=FEMALE);"
 ### loop for cognitive SWB (with starting values for cog SWB)
 
 for (val in 1:4){  # val = indices for value
-  for (swb in 1:1){ # swb = indices for subject well-being
+  for (swb in 1:2){ # swb = indices for subject well-being
     
     ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
     
     MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
-                               
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-!factor variances are all free
-VAL2 VAL4 VAL6 VAL8 VAL10;
-SWB1 SWB3 SWB5 SWB7 SWB9;
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0 L_swb1@0;
-eta_swb with L_val2@0 L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2;
-L_val4;
-L_val6;
-L_val8;
-L_val10;
-L_val12;
-L_swb1;
-L_swb3;
-L_swb5;
-L_swb7;
-L_swb9;
-L_swb11;
-
-!AR amongst SRs;
-L_val12 on L_val10;
-L_val10 on L_val8;
-L_val8 on L_val6;
-L_val6 on L_val4;
-L_val4 on L_val2;
-
-L_swb11 on L_swb9;
-L_swb9 on L_swb7;
-L_swb7 on L_swb5;
-L_swb5 on L_swb3;
-L_swb3 on L_swb1;
-
-!Crosslags (6 months);
-L_val12 on L_swb11;
-L_val10 on L_swb9;
-L_val8  on L_swb7;
-L_val6  on L_swb5;
-L_val4  on L_swb3;
-L_val2  on L_swb1;
-
-L_swb11 on L_val10;
-L_swb9 on L_val8;
-L_swb7 on L_val6;
-L_swb5 on L_val4;
-L_swb3 on L_val2;
-
-!Crosslags (18 months);
-L_val12 on L_swb9;
-L_val10 on L_swb7;
-L_val8  on L_swb5;
-L_val6  on L_swb3;
-L_val4  on L_swb1;
-
-L_swb11 on L_val8;
-L_swb9 on L_val6;
-L_swb7 on L_val4;
-L_swb5 on L_val2;
+    
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10;
+                SWB1 SWB3 SWB5 SWB7 SWB9;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0 L_swb1@0;
+                eta_swb with L_val2@0 L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2;
+                L_val4;
+                L_val6;
+                L_val8;
+                L_val10;
+                L_val12;
+                L_swb1;
+                L_swb3;
+                L_swb5;
+                L_swb7;
+                L_swb9;
+                L_swb11;
+                
+                !AR amongst SRs;
+                L_val12 on L_val10;
+                L_val10 on L_val8;
+                L_val8 on L_val6;
+                L_val6 on L_val4;
+                L_val4 on L_val2;
+                
+                L_swb11 on L_swb9;
+                L_swb9 on L_swb7;
+                L_swb7 on L_swb5;
+                L_swb5 on L_swb3;
+                L_swb3 on L_swb1;
+                
+                !Crosslags (6 months);
+                L_val12 on L_swb11;
+                L_val10 on L_swb9;
+                L_val8  on L_swb7;
+                L_val6  on L_swb5;
+                L_val4  on L_swb3;
+                L_val2  on L_swb1;
+                
+                L_swb11 on L_val10;
+                L_swb9 on L_val8;
+                L_swb7 on L_val6;
+                L_swb5 on L_val4;
+                L_swb3 on L_val2;
+                
+                !Crosslags (18 months);
+                L_val12 on L_swb9;
+                L_val10 on L_swb7;
+                L_val8  on L_swb5;
+                L_val6  on L_swb3;
+                L_val4  on L_swb1;
+                
+                L_swb11 on L_val8;
+                L_swb9 on L_val6;
+                L_swb7 on L_val4;
+                L_swb5 on L_val2;
               
                 
-MODEL MALE:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0 L_swb1@0;
-eta_swb with L_val2@0 L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2 (r1Ma);
-L_val4 (r1M);
-L_val6 (r1M);
-L_val8 (r1M);
-L_val10 (r1M);
-L_val12 (r1M);
-L_swb1 (r2Ma);
-L_swb3 (r2Mb);
-L_swb5 (r2M);
-L_swb7 (r2M);
-L_swb9 (r2M);
-L_swb11 (r2M);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10 (ar1M);
-L_val10 on L_val8 (ar1M);
-L_val8 on L_val6 (ar1M);
-L_val6 on L_val4 (ar1M);
-L_val4 on L_val2 (ar1M);
-
-L_swb11 on L_swb9 (ar2M);
-L_swb9 on L_swb7 (ar2M);
-L_swb7 on L_swb5 (ar2M);
-L_swb5 on L_swb3 (ar2M);
-L_swb3 on L_swb1 (ar2Ma);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1M);
-L_val10 on L_swb9 (cl1M);
-L_val8  on L_swb7 (cl1M);
-L_val6  on L_swb5 (cl1M);
-L_val4  on L_swb3 (cl1M);
-L_val2  on L_swb1 (cl1Ma);
-
-L_swb11 on L_val10 (cl2M);
-L_swb9 on L_val8 (cl2M);
-L_swb7 on L_val6 (cl2M);
-L_swb5 on L_val4 (cl2M);
-L_swb3 on L_val2 (cl2Ma);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3M);
-L_val10 on L_swb7 (cl3M);
-L_val8  on L_swb5 (cl3M);
-L_val6  on L_swb3 (cl3M);
-L_val4  on L_swb1 (cl3M);
-
-L_swb11 on L_val8 (cl4M);
-L_swb9 on L_val6 (cl4M);
-L_swb7 on L_val4 (cl4M);
-L_swb5 on L_val2 (cl4M);
+                MODEL MALE:
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0 L_swb1@0;
+                eta_swb with L_val2@0 L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2 (r1Ma);
+                L_val4 (r1M);
+                L_val6 (r1M);
+                L_val8 (r1M);
+                L_val10 (r1M);
+                L_val12 (r1M);
+                L_swb1 (r2Ma);
+                L_swb3 (r2Mb);
+                L_swb5 (r2M);
+                L_swb7 (r2M);
+                L_swb9 (r2M);
+                L_swb11 (r2M);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10 (ar1M);
+                L_val10 on L_val8 (ar1M);
+                L_val8 on L_val6 (ar1M);
+                L_val6 on L_val4 (ar1M);
+                L_val4 on L_val2 (ar1M);
+                
+                L_swb11 on L_swb9 (ar2M);
+                L_swb9 on L_swb7 (ar2M);
+                L_swb7 on L_swb5 (ar2M);
+                L_swb5 on L_swb3 (ar2M);
+                L_swb3 on L_swb1 (ar2Ma);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11 (cl1M);
+                L_val10 on L_swb9 (cl1M);
+                L_val8  on L_swb7 (cl1M);
+                L_val6  on L_swb5 (cl1M);
+                L_val4  on L_swb3 (cl1M);
+                L_val2  on L_swb1 (cl1Ma);
+                
+                L_swb11 on L_val10 (cl2M);
+                L_swb9 on L_val8 (cl2M);
+                L_swb7 on L_val6 (cl2M);
+                L_swb5 on L_val4 (cl2M);
+                L_swb3 on L_val2 (cl2Ma);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9 (cl3M);
+                L_val10 on L_swb7 (cl3M);
+                L_val8  on L_swb5 (cl3M);
+                L_val6  on L_swb3 (cl3M);
+                L_val4  on L_swb1 (cl3M);
+                
+                L_swb11 on L_val8 (cl4M);
+                L_swb9 on L_val6 (cl4M);
+                L_swb7 on L_val4 (cl4M);
+                L_swb5 on L_val2 (cl4M);
               
               
-MODEL FEMALE:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb*.692;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0;
-eta_val with L_swb1@0;
-eta_swb with L_val2@0;
-eta_swb with L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2 (r1Fa);
-L_val4 (r1F);
-L_val6 (r1F);
-L_val8 (r1F);
-L_val10 (r1F);
-L_val12 (r1F);
-L_swb1 (r2Fa);
-L_swb3 (r2Fb);
-L_swb5 (r2F);
-L_swb7 (r2F);
-L_swb9 (r2F);
-L_swb11 (r2F);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10 (ar1F);
-L_val10 on L_val8 (ar1F);
-L_val8 on L_val6 (ar1F);
-L_val6 on L_val4 (ar1F);
-L_val4 on L_val2 (ar1F);
-
-L_swb11 on L_swb9 (ar2F);
-L_swb9 on L_swb7 (ar2F);
-L_swb7 on L_swb5 (ar2F);
-L_swb5 on L_swb3 (ar2F);
-L_swb3 on L_swb1 (ar2Fa);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1F);
-L_val10 on L_swb9 (cl1F);
-L_val8  on L_swb7 (cl1F);
-L_val6  on L_swb5 (cl1F);
-L_val4  on L_swb3 (cl1F);
-L_val2  on L_swb1 (cl1Fa);
-
-L_swb11 on L_val10 (cl2F);
-L_swb9 on L_val8 (cl2F);
-L_swb7 on L_val6 (cl2F);
-L_swb5 on L_val4 (cl2F);
-L_swb3 on L_val2 (cl2Fa);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3F);
-L_val10 on L_swb7 (cl3F);
-L_val8  on L_swb5 (cl3F);
-L_val6  on L_swb3 (cl3F);
-L_val4  on L_swb1 (cl3F);
-
-L_swb11 on L_val8 (cl4F);
-L_swb9 on L_val6 (cl4F);
-L_swb7 on L_val4 (cl4F);
-L_swb5 on L_val2 (cl4F);
+                MODEL FEMALE:
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2 (r1Fa);
+                L_val4 (r1F);
+                L_val6 (r1F);
+                L_val8 (r1F);
+                L_val10 (r1F);
+                L_val12 (r1F);
+                L_swb1 (r2Fa);
+                L_swb3 (r2Fb);
+                L_swb5 (r2F);
+                L_swb7 (r2F);
+                L_swb9 (r2F);
+                L_swb11 (r2F);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10 (ar1F);
+                L_val10 on L_val8 (ar1F);
+                L_val8 on L_val6 (ar1F);
+                L_val6 on L_val4 (ar1F);
+                L_val4 on L_val2 (ar1F);
+                
+                L_swb11 on L_swb9 (ar2F);
+                L_swb9 on L_swb7 (ar2F);
+                L_swb7 on L_swb5 (ar2F);
+                L_swb5 on L_swb3 (ar2F);
+                L_swb3 on L_swb1 (ar2Fa);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11 (cl1F);
+                L_val10 on L_swb9 (cl1F);
+                L_val8  on L_swb7 (cl1F);
+                L_val6  on L_swb5 (cl1F);
+                L_val4  on L_swb3 (cl1F);
+                L_val2  on L_swb1 (cl1Fa);
+                
+                L_swb11 on L_val10 (cl2F);
+                L_swb9 on L_val8 (cl2F);
+                L_swb7 on L_val6 (cl2F);
+                L_swb5 on L_val4 (cl2F);
+                L_swb3 on L_val2 (cl2Fa);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9 (cl3F);
+                L_val10 on L_swb7 (cl3F);
+                L_val8  on L_swb5 (cl3F);
+                L_val6  on L_swb3 (cl3F);
+                L_val4  on L_swb1 (cl3F);
+                
+                L_swb11 on L_val8 (cl4F);
+                L_swb9 on L_val6 (cl4F);
+                L_swb7 on L_val4 (cl4F);
+                L_swb5 on L_val2 (cl4F);
  
                 
-!testing causal dominance
-Model Constraints: 
-NEW (var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
-V4_o_S1M S4_o_V1M dom_18mM
-var_vF var_sF V2_o_S1F S2_o_V1F dom_6mF
-V4_o_S1F S4_o_V1F dom_18mF
-mod6_MF mod18_MF);
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
+                V4_o_S1M S4_o_V1M dom_18mM
+                var_vF var_sF V2_o_S1F S2_o_V1F dom_6mF
+                V4_o_S1F S4_o_V1F dom_18mF
+                mod6_MF mod18_MF);
 
-! MALE
-var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
-var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
+                ! MALE
+                var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
+                var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
 
-V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
-S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
-V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
-S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
+                V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
+                S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
+                V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
+                S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
+                
+                dom_6mM = V2_o_S1M - S2_o_V1M;
+                dom_18mM = V4_o_S1M - S4_o_V1M;
+                
+                ! FEMALE
+                var_vF = ar1F**2*var_vF + cl1F**2*var_sF + cl3F**2*var_sF + r1F;
+                var_sF = ar2F**2*var_sF + cl2F**2*var_vF + cl4F**2*var_vF + r2F;
 
-dom_6mM = V2_o_S1M - S2_o_V1M;
-dom_18mM = V4_o_S1M - S4_o_V1M;
-
-! FEMALE
-var_vF = ar1F**2*var_vF + cl1F**2*var_sF + cl3F**2*var_sF + r1F;
-var_sF = ar2F**2*var_sF + cl2F**2*var_vF + cl4F**2*var_vF + r2F;
-
-V2_o_S1F = cl1F*sqrt(var_sF)/sqrt(var_vF);
-S2_o_V1F = cl2F*sqrt(var_vF)/sqrt(var_sF);
-V4_o_S1F = cl3F*sqrt(var_sF)/sqrt(var_vF);
-S4_o_V1F = cl4F*sqrt(var_vF)/sqrt(var_sF);
-
-dom_6mF = V2_o_S1F - S2_o_V1F;
-dom_18mF = V4_o_S1F - S4_o_V1F;
-
-! testing moderation effects of gender
-mod6_MF = dom_6mM - dom_6mF;
-mod18_MF = dom_18mM - dom_18mF;
+                V2_o_S1F = cl1F*sqrt(var_sF)/sqrt(var_vF);
+                S2_o_V1F = cl2F*sqrt(var_vF)/sqrt(var_sF);
+                V4_o_S1F = cl3F*sqrt(var_sF)/sqrt(var_vF);
+                S4_o_V1F = cl4F*sqrt(var_vF)/sqrt(var_sF);
+                
+                dom_6mF = V2_o_S1F - S2_o_V1F;
+                dom_18mF = V4_o_S1F - S4_o_V1F;
+                
+                ! testing moderation effects of gender
+                mod6_MF = dom_6mM - dom_6mF;
+                mod18_MF = dom_18mM - dom_18mF;    
+                               
                 ")
     
     Model <- mplusObject(
@@ -9789,419 +10347,6 @@ mod18_MF = dom_18mM - dom_18mF;
 }
 
 
-### loop for affective SWB (with starting values for aff SWB)
-
-for (val in 1:4){  # val = indices for value
-  for (swb in 2:2){ # swb = indices for subject well-being
-    
-    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
-    
-    MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
-                               
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-!factor variances are all free
-VAL2 VAL4 VAL6 VAL8 VAL10;
-SWB1 SWB3 SWB5 SWB7 SWB9;
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0 L_swb1@0;
-eta_swb with L_val2@0 L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2;
-L_val4;
-L_val6;
-L_val8;
-L_val10;
-L_val12;
-L_swb1;
-L_swb3;
-L_swb5;
-L_swb7;
-L_swb9;
-L_swb11;
-
-!AR amongst SRs;
-L_val12 on L_val10;
-L_val10 on L_val8;
-L_val8 on L_val6;
-L_val6 on L_val4;
-L_val4 on L_val2;
-
-L_swb11 on L_swb9;
-L_swb9 on L_swb7;
-L_swb7 on L_swb5;
-L_swb5 on L_swb3;
-L_swb3 on L_swb1;
-
-!Crosslags (6 months);
-L_val12 on L_swb11;
-L_val10 on L_swb9;
-L_val8  on L_swb7;
-L_val6  on L_swb5;
-L_val4  on L_swb3;
-L_val2  on L_swb1;
-
-L_swb11 on L_val10;
-L_swb9 on L_val8;
-L_swb7 on L_val6;
-L_swb5 on L_val4;
-L_swb3 on L_val2;
-
-!Crosslags (18 months);
-L_val12 on L_swb9;
-L_val10 on L_swb7;
-L_val8  on L_swb5;
-L_val6  on L_swb3;
-L_val4  on L_swb1;
-
-L_swb11 on L_val8;
-L_swb9 on L_val6;
-L_swb7 on L_val4;
-L_swb5 on L_val2;
-              
-                
-MODEL MALE:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb*.485;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0 L_swb1@0;
-eta_swb with L_val2@0 L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2 (r1Ma);
-L_val4 (r1M);
-L_val6 (r1M);
-L_val8 (r1M);
-L_val10 (r1M);
-L_val12 (r1M);
-L_swb1*.317 (r2Ma);
-L_swb3*.267 (r2Mb);
-L_swb5*.231 (r2M);
-L_swb7 (r2M);
-L_swb9 (r2M);
-L_swb11 (r2M);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10 (ar1M);
-L_val10 on L_val8 (ar1M);
-L_val8 on L_val6 (ar1M);
-L_val6 on L_val4 (ar1M);
-L_val4 on L_val2 (ar1M);
-
-L_swb11 on L_swb9*.202 (ar2M);
-L_swb9 on L_swb7 (ar2M);
-L_swb7 on L_swb5 (ar2M);
-L_swb5 on L_swb3 (ar2M);
-L_swb3 on L_swb1 (ar2Ma);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1M);
-L_val10 on L_swb9 (cl1M);
-L_val8  on L_swb7 (cl1M);
-L_val6  on L_swb5 (cl1M);
-L_val4  on L_swb3 (cl1M);
-L_val2  on L_swb1 (cl1Ma);
-
-L_swb11 on L_val10 (cl2M);
-L_swb9 on L_val8 (cl2M);
-L_swb7 on L_val6 (cl2M);
-L_swb5 on L_val4 (cl2M);
-L_swb3 on L_val2 (cl2Ma);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3M);
-L_val10 on L_swb7 (cl3M);
-L_val8  on L_swb5 (cl3M);
-L_val6  on L_swb3 (cl3M);
-L_val4  on L_swb1 (cl3M);
-
-L_swb11 on L_val8 (cl4M);
-L_swb9 on L_val6 (cl4M);
-L_swb7 on L_val4 (cl4M);
-L_swb5 on L_val2 (cl4M);
-              
-              
-MODEL FEMALE:
-
-!freely estimate occasion-specific grand means
-[VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
-[SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
-
-! BETWEEN-PERSON LEVEL
-
-!Random intercepts
-eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
-eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
-
-!Constrain means of random intercepts
-[eta_val@0];
-[eta_swb@0];
-
-!Estimate variances of random intercept;
-eta_val;
-eta_swb*.489;
-
-! allowing for covariances among random intercepts
-eta_val with eta_swb;
-
-!constraining covariance among random intercepts and first residuals
-! Mplus does allow correlations among these exogeneous variables otherwise
-eta_val with L_val2@0;
-eta_val with L_swb1@0;
-eta_swb with L_val2@0;
-eta_swb with L_swb1@0;
-
-! WITHIN-PERSON LEVEL
-
-!Constrain observed residual variances, to identify structured residuals;
-VAL2@0;
-VAL4@0;
-VAL6@0;
-VAL8@0;
-VAL10@0;
-VAL12@0;
-SWB1@0;
-SWB3@0;
-SWB5@0;
-SWB7@0;
-SWB9@0;
-SWB11@0;
-
-!Estimate structured residuals
-L_val2 by VAL2@1;
-L_val4 by VAL4@1;
-L_val6 by VAL6@1;
-L_val8 by VAL8@1;
-L_val10 by VAL10@1;
-L_val12 by VAL12@1;
-
-L_swb1 by SWB1@1;
-L_swb3 by SWB3@1;
-L_swb5 by SWB5@1;
-L_swb7 by SWB7@1;
-L_swb9 by SWB9@1;
-L_swb11 by SWB11@1;
-
-!Constrain means/intercepts of residuals
-[L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
-[L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
-
-!Set equal the variances of the 'residuals of the residuals'
-!Freely estimate t1 structured residual.
-L_val2 (r1Fa);
-L_val4 (r1F);
-L_val6 (r1F);
-L_val8 (r1F);
-L_val10 (r1F);
-L_val12 (r1F);
-L_swb1*.366 (r2Fa);
-L_swb3*.371 (r2Fb);
-L_swb5*.285 (r2F);
-L_swb7 (r2F);
-L_swb9 (r2F);
-L_swb11 (r2F);
-
-!AR amongst SRs with assumed stationarity;
-L_val12 on L_val10 (ar1F);
-L_val10 on L_val8 (ar1F);
-L_val8 on L_val6 (ar1F);
-L_val6 on L_val4 (ar1F);
-L_val4 on L_val2 (ar1F);
-
-L_swb11 on L_swb9*.180 (ar2F);
-L_swb9 on L_swb7 (ar2F);
-L_swb7 on L_swb5 (ar2F);
-L_swb5 on L_swb3 (ar2F);
-L_swb3 on L_swb1 (ar2Fa);
-
-!Constrained crosslags (6 months);
-L_val12 on L_swb11 (cl1F);
-L_val10 on L_swb9 (cl1F);
-L_val8  on L_swb7 (cl1F);
-L_val6  on L_swb5 (cl1F);
-L_val4  on L_swb3 (cl1F);
-L_val2  on L_swb1 (cl1Fa);
-
-L_swb11 on L_val10 (cl2F);
-L_swb9 on L_val8 (cl2F);
-L_swb7 on L_val6 (cl2F);
-L_swb5 on L_val4 (cl2F);
-L_swb3 on L_val2 (cl2Fa);
-
-!Constrained crosslags (18 months);
-L_val12 on L_swb9 (cl3F);
-L_val10 on L_swb7 (cl3F);
-L_val8  on L_swb5 (cl3F);
-L_val6  on L_swb3 (cl3F);
-L_val4  on L_swb1 (cl3F);
-
-L_swb11 on L_val8 (cl4F);
-L_swb9 on L_val6 (cl4F);
-L_swb7 on L_val4 (cl4F);
-L_swb5 on L_val2 (cl4F);
- 
-                
-!testing causal dominance
-Model Constraints: 
-NEW (var_vM var_sM V2_o_S1M S2_o_V1M dom_6mM
-V4_o_S1M S4_o_V1M dom_18mM
-var_vF var_sF V2_o_S1F S2_o_V1F dom_6mF
-V4_o_S1F S4_o_V1F dom_18mF
-mod6_MF mod18_MF);
-
-! MALE
-var_vM = ar1M**2*var_vM + cl1M**2*var_sM + cl3M**2*var_sM + r1M;
-var_sM = ar2M**2*var_sM + cl2M**2*var_vM + cl4M**2*var_vM + r2M;
-
-V2_o_S1M = cl1M*sqrt(var_sM)/sqrt(var_vM);
-S2_o_V1M = cl2M*sqrt(var_vM)/sqrt(var_sM);
-V4_o_S1M = cl3M*sqrt(var_sM)/sqrt(var_vM);
-S4_o_V1M = cl4M*sqrt(var_vM)/sqrt(var_sM);
-
-dom_6mM = V2_o_S1M - S2_o_V1M;
-dom_18mM = V4_o_S1M - S4_o_V1M;
-
-! FEMALE
-var_vF = ar1F**2*var_vF + cl1F**2*var_sF + cl3F**2*var_sF + r1F;
-var_sF = ar2F**2*var_sF + cl2F**2*var_vF + cl4F**2*var_vF + r2F;
-
-V2_o_S1F = cl1F*sqrt(var_sF)/sqrt(var_vF);
-S2_o_V1F = cl2F*sqrt(var_vF)/sqrt(var_sF);
-V4_o_S1F = cl3F*sqrt(var_sF)/sqrt(var_vF);
-S4_o_V1F = cl4F*sqrt(var_vF)/sqrt(var_sF);
-
-dom_6mF = V2_o_S1F - S2_o_V1F;
-dom_18mF = V4_o_S1F - S4_o_V1F;
-
-! testing moderation effects of gender
-mod6_MF = dom_6mM - dom_6mF;
-mod18_MF = dom_18mM - dom_18mF;
-                ")
-    
-    Model <- mplusObject(
-      VARIABLE=ITEMS,
-      usevariables = names(data),
-      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS =10000;",
-      MODEL=MODEL,rdata=data,autov=T,
-      OUTPUT="STDYX CINTERVAL;")
-    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
-  }
-}
 
 ### 6.2.3 Education (Robustness Check) ####
 
@@ -10235,6 +10380,421 @@ grouping is edu_d (0=LOW 1=HIGH);"
 
 for (val in 1:4){  # val = indices for value
   for (swb in 1:2){ # swb = indices for subject well-being
+    
+    ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
+    
+    MODEL <- paste0(meas_val[[val]], meas_swb[[swb]], "
+                               
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                !factor variances are all free
+                VAL2 VAL4 VAL6 VAL8 VAL10;
+                SWB1 SWB3 SWB5 SWB7 SWB9;
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0 L_swb1@0;
+                eta_swb with L_val2@0 L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2;
+                L_val4;
+                L_val6;
+                L_val8;
+                L_val10;
+                L_val12;
+                L_swb1;
+                L_swb3;
+                L_swb5;
+                L_swb7;
+                L_swb9;
+                L_swb11;
+                
+                !AR amongst SRs;
+                L_val12 on L_val10;
+                L_val10 on L_val8;
+                L_val8 on L_val6;
+                L_val6 on L_val4;
+                L_val4 on L_val2;
+                
+                L_swb11 on L_swb9;
+                L_swb9 on L_swb7;
+                L_swb7 on L_swb5;
+                L_swb5 on L_swb3;
+                L_swb3 on L_swb1;
+                
+                !Crosslags (6 months);
+                L_val12 on L_swb11;
+                L_val10 on L_swb9;
+                L_val8  on L_swb7;
+                L_val6  on L_swb5;
+                L_val4  on L_swb3;
+                L_val2  on L_swb1;
+                
+                L_swb11 on L_val10;
+                L_swb9 on L_val8;
+                L_swb7 on L_val6;
+                L_swb5 on L_val4;
+                L_swb3 on L_val2;
+                
+                !Crosslags (18 months);
+                L_val12 on L_swb9;
+                L_val10 on L_swb7;
+                L_val8  on L_swb5;
+                L_val6  on L_swb3;
+                L_val4  on L_swb1;
+                
+                L_swb11 on L_val8;
+                L_swb9 on L_val6;
+                L_swb7 on L_val4;
+                L_swb5 on L_val2;
+                
+                
+                MODEL LOW:
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0 L_swb1@0;
+                eta_swb with L_val2@0 L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2 (r1La);
+                L_val4 (r1L);
+                L_val6 (r1L);
+                L_val8 (r1L);
+                L_val10 (r1L);
+                L_val12 (r1L);
+                L_swb1 (r2La);
+                L_swb3 (r2Lb);
+                L_swb5 (r2L);
+                L_swb7 (r2L);
+                L_swb9 (r2L);
+                L_swb11 (r2L);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10 (ar1L);
+                L_val10 on L_val8 (ar1L);
+                L_val8 on L_val6 (ar1L);
+                L_val6 on L_val4 (ar1L);
+                L_val4 on L_val2 (ar1L);
+                
+                L_swb11 on L_swb9 (ar2L);
+                L_swb9 on L_swb7 (ar2L);
+                L_swb7 on L_swb5 (ar2L);
+                L_swb5 on L_swb3 (ar2L);
+                L_swb3 on L_swb1 (ar2La);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11 (cl1L);
+                L_val10 on L_swb9 (cl1L);
+                L_val8  on L_swb7 (cl1L);
+                L_val6  on L_swb5 (cl1L);
+                L_val4  on L_swb3 (cl1L);
+                L_val2  on L_swb1 (cl1La);
+                
+                L_swb11 on L_val10 (cl2L);
+                L_swb9 on L_val8 (cl2L);
+                L_swb7 on L_val6 (cl2L);
+                L_swb5 on L_val4 (cl2L);
+                L_swb3 on L_val2 (cl2La);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9 (cl3L);
+                L_val10 on L_swb7 (cl3L);
+                L_val8  on L_swb5 (cl3L);
+                L_val6  on L_swb3 (cl3L);
+                L_val4  on L_swb1 (cl3L);
+                
+                L_swb11 on L_val8 (cl4L);
+                L_swb9 on L_val6 (cl4L);
+                L_swb7 on L_val4 (cl4L);
+                L_swb5 on L_val2 (cl4L);
+              
+              
+                MODEL HIGH:
+                
+                !freely estimate occasion-specific grand means
+                [VAL2 VAL4 VAL6 VAL8 VAL10 VAL12];
+                [SWB1 SWB3 SWB5 SWB7 SWB9 SWB11];
+                
+                ! BETWEEN-PERSON LEVEL
+                
+                !Random intercepts
+                eta_val by VAL2@1 VAL4@1 VAL6@1 VAL8@1 VAL10@1 VAL12@1;
+                eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
+                
+                !Constrain means of random intercepts
+                [eta_val@0];
+                [eta_swb@0];
+                
+                !Estimate variances of random intercept;
+                eta_val;
+                eta_swb;
+                
+                ! allowing for covariances among random intercepts
+                eta_val with eta_swb;
+                
+                !constraining covariance among random intercepts and first residuals
+                !otherwise these exogeneous variables would covary
+                eta_val with L_val2@0;
+                eta_val with L_swb1@0;
+                eta_swb with L_val2@0;
+                eta_swb with L_swb1@0;
+                
+                ! WITHIN-PERSON LEVEL
+                
+                !Constrain observed residuals, to identify structured residuals;
+                VAL2@0;
+                VAL4@0;
+                VAL6@0;
+                VAL8@0;
+                VAL10@0;
+                VAL12@0;
+                SWB1@0;
+                SWB3@0;
+                SWB5@0;
+                SWB7@0;
+                SWB9@0;
+                SWB11@0;
+                
+                !Estimate structured residuals
+                L_val2 by VAL2@1;
+                L_val4 by VAL4@1;
+                L_val6 by VAL6@1;
+                L_val8 by VAL8@1;
+                L_val10 by VAL10@1;
+                L_val12 by VAL12@1;
+                
+                L_swb1 by SWB1@1;
+                L_swb3 by SWB3@1;
+                L_swb5 by SWB5@1;
+                L_swb7 by SWB7@1;
+                L_swb9 by SWB9@1;
+                L_swb11 by SWB11@1;
+                
+                !Constrain means/intercepts of residuals
+                [L_val2@0 L_val4@0 L_val6@0 L_val8@0 L_val10@0 L_val12@0];
+                [L_swb1@0 L_swb3@0 L_swb5@0 L_swb7@0 L_swb9@0 L_swb11@0];
+                
+                !Set equal the variances of the 'residuals of the residuals'
+                !Freely estimate t1 structured residual.
+                L_val2 (r1Ha);
+                L_val4 (r1H);
+                L_val6 (r1H);
+                L_val8 (r1H);
+                L_val10 (r1H);
+                L_val12 (r1H);
+                L_swb1 (r2Ha);
+                L_swb3 (r2Hb);
+                L_swb5 (r2H);
+                L_swb7 (r2H);
+                L_swb9 (r2H);
+                L_swb11 (r2H);
+                
+                !AR amongst SRs with assumed stationarity;
+                L_val12 on L_val10 (ar1H);
+                L_val10 on L_val8 (ar1H);
+                L_val8 on L_val6 (ar1H);
+                L_val6 on L_val4 (ar1H);
+                L_val4 on L_val2 (ar1H);
+                
+                L_swb11 on L_swb9 (ar2H);
+                L_swb9 on L_swb7 (ar2H);
+                L_swb7 on L_swb5 (ar2H);
+                L_swb5 on L_swb3 (ar2H);
+                L_swb3 on L_swb1 (ar2Ha);
+                
+                !Constrained crosslags (6 months);
+                L_val12 on L_swb11 (cl1H);
+                L_val10 on L_swb9 (cl1H);
+                L_val8  on L_swb7 (cl1H);
+                L_val6  on L_swb5 (cl1H);
+                L_val4  on L_swb3 (cl1H);
+                L_val2  on L_swb1 (cl1Ha);
+                
+                L_swb11 on L_val10 (cl2H);
+                L_swb9 on L_val8 (cl2H);
+                L_swb7 on L_val6 (cl2H);
+                L_swb5 on L_val4 (cl2H);
+                L_swb3 on L_val2 (cl2Ha);
+                
+                !Constrained crosslags (18 months);
+                L_val12 on L_swb9 (cl3H);
+                L_val10 on L_swb7 (cl3H);
+                L_val8  on L_swb5 (cl3H);
+                L_val6  on L_swb3 (cl3H);
+                L_val4  on L_swb1 (cl3H);
+                
+                L_swb11 on L_val8 (cl4H);
+                L_swb9 on L_val6 (cl4H);
+                L_swb7 on L_val4 (cl4H);
+                L_swb5 on L_val2 (cl4H);
+ 
+                
+                !testing causal dominance
+                Model Constraints: 
+                NEW (var_vL var_sL V2_o_S1L S2_o_V1L dom_6mL
+                V4_o_S1L S4_o_V1L dom_18mL
+                var_vH var_sH V2_o_S1H S2_o_V1H dom_6mH
+                V4_o_S1H S4_o_V1H dom_18mH
+                mod6_LH mod18_LH);
+
+                ! LOW
+                var_vL = ar1L**2*var_vL + cl1L**2*var_sL + cl3L**2*var_sL + r1L;
+                var_sL = ar2L**2*var_sL + cl2L**2*var_vL + cl4L**2*var_vL + r2L;
+
+                V2_o_S1L = cl1L*sqrt(var_sL)/sqrt(var_vL);
+                S2_o_V1L = cl2L*sqrt(var_vL)/sqrt(var_sL);
+                V4_o_S1L = cl3L*sqrt(var_sL)/sqrt(var_vL);
+                S4_o_V1L = cl4L*sqrt(var_vL)/sqrt(var_sL);
+                
+                dom_6mL = V2_o_S1L - S2_o_V1L;
+                dom_18mL = V4_o_S1L - S4_o_V1L;
+                
+                ! HIGH
+                var_vH = ar1H**2*var_vH + cl1H**2*var_sH + cl3H**2*var_sH + r1H;
+                var_sH = ar2H**2*var_sH + cl2H**2*var_vH + cl4H**2*var_vH + r2H;
+
+                V2_o_S1H = cl1H*sqrt(var_sH)/sqrt(var_vH);
+                S2_o_V1H = cl2H*sqrt(var_vH)/sqrt(var_sH);
+                V4_o_S1H = cl3H*sqrt(var_sH)/sqrt(var_vH);
+                S4_o_V1H = cl4H*sqrt(var_vH)/sqrt(var_sH);
+                
+                dom_6mH = V2_o_S1H - S2_o_V1H;
+                dom_18mH = V4_o_S1H - S4_o_V1H;
+                
+                ! testing moderation effects of education
+                mod6_LH = dom_6mL - dom_6mL;
+                mod18_LH = dom_18mL - dom_18mH;
+                ")
+    
+    Model <- mplusObject(
+      VARIABLE=ITEMS,
+      usevariables = names(data),
+      ANALYSIS="ESTIMATOR = MLR; PROCESSORS=4; ITERATIONS = 10000;",
+      MODEL=MODEL,rdata=data,autov=T,
+      OUTPUT="STDYX CINTERVAL;")
+    output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
+  }
+}
+
+
+### 6.2.3.6 trans - aff SWB ####
+
+for (val in 3:3){  # val = indices for value
+  for (swb in 2:2){ # swb = indices for subject well-being
     
     ITEMS <- paste0(items_val[[val]], items_swb[[swb]])
     
@@ -10378,7 +10938,7 @@ eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
 
 !Estimate variances of random intercept;
 eta_val;
-eta_swb;
+eta_swb*.526;
 
 ! allowing for covariances among random intercepts
 eta_val with eta_swb;
@@ -10431,9 +10991,9 @@ L_val6 (r1L);
 L_val8 (r1L);
 L_val10 (r1L);
 L_val12 (r1L);
-L_swb1 (r2La);
-L_swb3 (r2Lb);
-L_swb5 (r2L);
+L_swb1*.343 (r2La);
+L_swb3*.318 (r2Lb);
+L_swb5*.253 (r2L);
 L_swb7 (r2L);
 L_swb9 (r2L);
 L_swb11 (r2L);
@@ -10445,7 +11005,7 @@ L_val8 on L_val6 (ar1L);
 L_val6 on L_val4 (ar1L);
 L_val4 on L_val2 (ar1L);
 
-L_swb11 on L_swb9 (ar2L);
+L_swb11 on L_swb9*.204 (ar2L);
 L_swb9 on L_swb7 (ar2L);
 L_swb7 on L_swb5 (ar2L);
 L_swb5 on L_swb3 (ar2L);
@@ -10496,7 +11056,7 @@ eta_swb by SWB1@1 SWB3@1 SWB5@1 SWB7@1 SWB9@1 SWB11@1;
 
 !Estimate variances of random intercept;
 eta_val;
-eta_swb;
+eta_swb*.415;
 
 ! allowing for covariances among random intercepts
 eta_val with eta_swb;
@@ -10551,9 +11111,9 @@ L_val6 (r1H);
 L_val8 (r1H);
 L_val10 (r1H);
 L_val12 (r1H);
-L_swb1 (r2Ha);
-L_swb3 (r2Hb);
-L_swb5 (r2H);
+L_swb1*.341 (r2Ha);
+L_swb3*.318 (r2Hb);
+L_swb5*.262 (r2H);
 L_swb7 (r2H);
 L_swb9 (r2H);
 L_swb11 (r2H);
@@ -10565,7 +11125,7 @@ L_val8 on L_val6 (ar1H);
 L_val6 on L_val4 (ar1H);
 L_val4 on L_val2 (ar1H);
 
-L_swb11 on L_swb9 (ar2H);
+L_swb11 on L_swb9*.161 (ar2H);
 L_swb9 on L_swb7 (ar2H);
 L_swb7 on L_swb5 (ar2H);
 L_swb5 on L_swb3 (ar2H);
@@ -10644,3 +11204,4 @@ mod18_LH = dom_18mL - dom_18mH;
     output <- mplusModeler(Model, modelout=paste0(value_SWB.nam[[val]][swb], ".inp"), run=1, check=F)
   }
 }
+
