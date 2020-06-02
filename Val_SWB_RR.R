@@ -10776,7 +10776,7 @@ for (val in 1:4){  # val = indices for value
                 dom_18mH = V4_o_S1H - S4_o_V1H;
                 
                 ! testing moderation effects of education
-                mod6_LH = dom_6mL - dom_6mL;
+                mod6_LH = dom_6mL - dom_6mH;
                 mod18_LH = dom_18mL - dom_18mH;
                 ")
     
@@ -11191,7 +11191,7 @@ dom_6mH = V2_o_S1H - S2_o_V1H;
 dom_18mH = V4_o_S1H - S4_o_V1H;
 
 ! testing moderation effects of education
-mod6_LH = dom_6mL - dom_6mL;
+mod6_LH = dom_6mL - dom_6mH;
 mod18_LH = dom_18mL - dom_18mH;
                 ")
     
