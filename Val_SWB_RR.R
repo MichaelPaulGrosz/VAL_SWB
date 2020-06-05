@@ -14,7 +14,7 @@
 library(gdata) # to rename variables
 library(haven) # lo load Stata files GESIS panel 
 library(MplusAutomation) # to use Mplus via R
-
+library(openxlsx) # to create Excel files via R
 
 ### functions we need later on
 
@@ -287,6 +287,67 @@ data$edu_d <- ifelse(data$edu==9, 1, 0) # If the participant has the Abitur (gen
 
 neg_items.nam <- c(SWB_aff_t1[-c(4,6)], SWB_aff_t3[-c(4,6)], SWB_aff_t5[-c(4,6)], SWB_aff_t7[-c(4,6)], SWB_aff_t9[-c(4,6)],  SWB_aff_t11[-c(4,6)])
 data[ ,neg_items.nam] <- 7-data[ ,neg_items.nam]
+
+
+
+### Descriptives ###################################
+
+table(data$gender) # 1 = Male; 2 = Female
+table(data$gender)[2]/sum(table(data$gender)[1:2])*100
+
+mean(data$age, na.rm = T)
+sd(data$age, na.rm = T)
+
+## manifest correlation matrix among all constructs and measurement occasions + alphas
+
+# creating scale scores
+row_means <- data.frame(rowMeans(data[ , OP_t2]), rowMeans(data[ , OP_t4]), rowMeans(data[ , OP_t6]), rowMeans(data[ , OP_t8]), rowMeans(data[ , OP_t10]), rowMeans(data[ , OP_t12]),
+                        rowMeans(data[ , CO_t2]), rowMeans(data[ , CO_t4]), rowMeans(data[ , CO_t6]), rowMeans(data[ , CO_t8]), rowMeans(data[ , CO_t10]), rowMeans(data[ , CO_t12]),
+                        rowMeans(data[ , ST_t2]), rowMeans(data[ , ST_t4]), rowMeans(data[ , ST_t6]), rowMeans(data[ , ST_t8]), rowMeans(data[ , ST_t10]), rowMeans(data[ , ST_t12]),
+                        rowMeans(data[ , SE_t2]), rowMeans(data[ , SE_t4]), rowMeans(data[ , SE_t6]), rowMeans(data[ , SE_t8]), rowMeans(data[ , SE_t10]), rowMeans(data[ , SE_t12]),
+                        rowMeans(data[ , SWB_cog_t1]), rowMeans(data[ , SWB_cog_t3]), rowMeans(data[ , SWB_cog_t5]), rowMeans(data[ , SWB_cog_t7]), rowMeans(data[ , SWB_cog_t9]), rowMeans(data[ , SWB_cog_t11]),
+                        rowMeans(data[ , SWB_aff_t1]), rowMeans(data[ , SWB_aff_t3]), rowMeans(data[ , SWB_aff_t5]), rowMeans(data[ , SWB_aff_t7]), rowMeans(data[ , SWB_aff_t9]),  rowMeans(data[ , SWB_aff_t11]))
+
+# computing correlation matrix
+cor.tab <- cor(row_means, use="pairwise.complete.obs") # calculating correlations
+cor.mat <- matrix(cor.tab,36,36) # making it a matrix
+
+
+# renaming colnames
+Scale <- colnames(cor.mat) <- c("OP_t2", "OP_t4", "OP_t6", "OP_t8", "OP_t10", "OP_t12",
+                                "CO_t2", "CO_t4", "CO_t6", "CO_t8", "CO_t10", "CO_t12",
+                                "ST_t2", "ST_t4", "ST_t6", "ST_t8", "ST_t10", "ST_t12",
+                                "SE_t2", "SE_t4", "SE_t6", "SE_t8", "SE_t10", "SE_t12",
+                                "SWB_cog_t1", "SWB_cog_t3", "SWB_cog_t5", "SWB_cog_t7", "SWB_cog_t9", "SWB_cog_t11",
+                                "SWB_aff_t1", "SWB_aff_t3", "SWB_aff_t5", "SWB_aff_t7", "SWB_aff_t9", "SWB_aff_t11") 
+
+
+for (s in c(1:36)){ # s = scale
+  diag(cor.mat)[s] <- as.numeric(psych::alpha(data[,get(Scale[s])], na.rm=T)[[1]][1])
+}
+
+cor.mat[upper.tri(cor.mat)] <- "" # removing values above the diagonal (these values are redundant)
+
+
+cor.tab <- data.frame(apply(cor.mat, 2, function(x) as.numeric(as.character(x)))) # making it a data frame again
+
+cor.tab <- data.frame(Scale, cor.tab) # adding rownames as column
+
+
+# removing leading zeros and rounding to two decimals
+nozero.tab <- cor.tab
+
+for (c in 2:37){
+  for(r in 1:36){
+    if(!is.na(cor.tab[r,c])){
+      nozero.tab[r,c] <- nozero(cor.tab[r,c])
+    }
+  }
+}
+
+
+# writing excel table
+write.xlsx(nozero.tab, "D:/Values_SWB/Analysis/Tables/Manifest_Cor_Matrix_Alphas.xlsx")
 
 
 ### 2 Testing Measurement Invariance accross measurement occasions  ####
