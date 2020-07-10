@@ -1,8 +1,8 @@
 # Project title: "The longitudinal interplay between personal values and subjective well-being"
-# what is code about: R code for Resubmission of Stage 1 Registered Report
+# what is code about: R code for Submission of Stage 2 Registered Report
 # Authors (e-mail):
 # R version: 3.6.1
-# R packages used (versions): gdata (2.18.0), haven (2.1.1), MplusAutomation (0.7-3)
+# R packages used (versions): gdata (2.18.0), haven (2.1.1), MplusAutomation (0.7-3), openxlsx (4.1.5)
 
 
 ### for table of contents, click on "show document outline" in R Studio
